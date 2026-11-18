@@ -1,0 +1,120 @@
+{
+  "lang_name": "Italiano",
+  "meta": {
+    "locale": "it_IT",
+    "title": "Holiday House Antica – casa vacanze a Vidovići, isola di Cres (Cherso), Croazia",
+    "description": "Casa vacanze in pietra ristrutturata per 6 persone a Vidovići, sull'isola di Cres: 2 appartamenti, 3 camere da letto, balcone vista mare, cortile e terrazza. Pace, natura e vista sul Quarnero."
+  },
+  "nav": {
+    "house": "La casa",
+    "rooms": "Ambienti",
+    "amenities": "Servizi",
+    "location": "Posizione",
+    "contact": "Contatti",
+    "menu": "Menu",
+    "language": "Lingua"
+  },
+  "hero": {
+    "eyebrow": "Vidovići · Isola di Cres · Croazia",
+    "subtitle": "Una casa in pietra ristrutturata nel 2021, nella pace e nel silenzio, 280 m sopra il mare del Quarnero.",
+    "cta_contact": "Invia una richiesta",
+    "cta_rooms": "Scopri la casa",
+    "image_alt": "Vista da Vidovići sulla baia e sulle isole dell'arcipelago di Lussino"
+  },
+  "facts": [
+    { "value": "6", "label": "ospiti" },
+    { "value": "3", "label": "camere da letto" },
+    { "value": "2", "label": "appartamenti" },
+    { "value": "2", "label": "bagni" },
+    { "value": "145 m²", "label": "di superficie" },
+    { "value": "280 m", "label": "sul livello del mare" }
+  ],
+  "about": {
+    "kicker": "La casa",
+    "title": "Una delle case più antiche di Vidovići, restaurata con cura",
+    "paragraphs": [
+      "Holiday House Antica è una delle case più antiche del paese di Vidovići, sull'isola di Cres (Cherso). Ristrutturata nel 2021, offre circa 145 m² distribuiti su piano terra e tre piani, con muri in pietra, travi in legno e persiane verdi che conservano lo spirito dell'antica architettura isolana.",
+      "La casa è composta da due appartamenti con ingressi separati – ideale per due famiglie o amici che viaggiano insieme. In totale offre 3 camere da letto per 6 persone, due cucine completamente attrezzate, due zone pranzo, due soggiorni e due bagni.",
+      "Davanti all'ingresso si trovano un cortile e una piccola terrazza con posti a sedere per sei persone, mentre dal balcone al terzo piano si gode una splendida vista sul Quarnero e sul mare Adriatico."
+    ],
+    "image_alt": "Holiday House Antica – la casa bianca in pietra con le persiane verdi"
+  },
+  "rooms": {
+    "kicker": "Ambienti",
+    "title": "Uno sguardo all'interno",
+    "intro": "Scegli un ambiente per vederne le foto. Clicca su una foto per ingrandirla.",
+    "names": {
+      "bedroom-1": "Camera 1",
+      "bedroom-2": "Camera 2",
+      "bedroom-3": "Camera 3",
+      "kitchen-living-1": "Cucina e soggiorno 1",
+      "kitchen-living-2": "Cucina e soggiorno 2",
+      "bathroom-1": "Bagno 1",
+      "bathroom-2": "Bagno 2",
+      "balcony": "Balcone",
+      "yard": "Cortile e terrazza",
+      "surroundings": "Casa e dintorni"
+    }
+  },
+  "amenities": {
+    "kicker": "Servizi",
+    "title": "Tutto il necessario per una vacanza rilassante",
+    "items": [
+      { "icon": "wifi", "text": "Wi-Fi gratuito" },
+      { "icon": "tv", "text": "2 televisori" },
+      { "icon": "climate", "text": "Pompa di calore – raffrescamento e riscaldamento" },
+      { "icon": "kitchen", "text": "2 cucine completamente attrezzate" },
+      { "icon": "door", "text": "2 appartamenti con ingressi separati" },
+      { "icon": "sun", "text": "Cortile e terrazza con posti a sedere per 6" },
+      { "icon": "waves", "text": "Balcone con vista mare" },
+      { "icon": "parking", "text": "Parcheggio pubblico gratuito a 100 m" },
+      { "icon": "coffee", "text": "Colazione su richiesta" },
+      { "icon": "leaf", "text": "Agnello e patate fatti in casa su richiesta" }
+    ]
+  },
+  "location": {
+    "kicker": "Posizione",
+    "title": "Pace, silenzio e vista sul Quarnero",
+    "paragraphs": [
+      "Vidovići si trova a 280 m sul livello del mare, circondato dal profumo delle piante mediterranee, dal silenzio e da una natura incontaminata. Dal paese si gode una vista panoramica sulla baia, sull'Osoršćica (Monte Ossero) – la vetta più alta dell'isola di Lošinj (Lussino) – sulle numerose isolette dell'arcipelago di Lussino e sul paese di Martinšćica.",
+      "L'isola di Cres si raggiunge in traghetto dall'Istria (Brestova – Porozina) o dall'isola di Krk (Valbiska – Merag); la traversata dura circa 25 minuti."
+    ],
+    "distances": [
+      { "icon": "waves", "value": "2,5 km", "label": "dalla prima spiaggia a Martinšćica" },
+      { "icon": "kitchen", "value": "~2 km", "label": "ristoranti e market a Martinšćica" },
+      { "icon": "parking", "value": "100 m", "label": "parcheggio pubblico gratuito" },
+      { "icon": "ship", "value": "25 min", "label": "traversata in traghetto per Cres" }
+    ],
+    "map_title": "Mappa – Vidovići, isola di Cres",
+    "open_map": "Apri in Google Maps"
+  },
+  "contact": {
+    "kicker": "Contatti",
+    "title": "Pianifica il tuo soggiorno",
+    "intro": "Chiamaci o scrivici – saremo felici di rispondere a ogni domanda su disponibilità e prezzi.",
+    "call": "Chiamaci",
+    "email": "Invia un'e-mail",
+    "whatsapp": "WhatsApp",
+    "whatsapp_value": "Invia un messaggio",
+    "form": {
+      "title": "Invia una richiesta",
+      "name": "Il tuo nome",
+      "arrival": "Arrivo",
+      "departure": "Partenza",
+      "guests": "Numero di ospiti",
+      "message": "Messaggio",
+      "submit": "Invia richiesta",
+      "note": "Il pulsante apre la tua app di posta con un messaggio già compilato.",
+      "subject": "Richiesta – Holiday House Antica"
+    }
+  },
+  "footer": {
+    "address": "Vidovići, isola di Cres, Croazia",
+    "rights": "Tutti i diritti riservati."
+  },
+  "lightbox": {
+    "close": "Chiudi",
+    "prev": "Foto precedente",
+    "next": "Foto successiva"
+  }
+}

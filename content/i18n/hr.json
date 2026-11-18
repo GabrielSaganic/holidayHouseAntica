@@ -1,0 +1,120 @@
+{
+  "lang_name": "Hrvatski",
+  "meta": {
+    "locale": "hr_HR",
+    "title": "Holiday House Antica – kuća za odmor, Vidovići, otok Cres",
+    "description": "Obnovljena kamena kuća za odmor za 6 osoba u Vidovićima na otoku Cresu: 2 apartmana, 3 spavaće sobe, balkon s pogledom na more, dvorište i terasa. Mir, priroda i pogled na Kvarner."
+  },
+  "nav": {
+    "house": "Kuća",
+    "rooms": "Prostorije",
+    "amenities": "Sadržaji",
+    "location": "Lokacija",
+    "contact": "Kontakt",
+    "menu": "Izbornik",
+    "language": "Jezik"
+  },
+  "hero": {
+    "eyebrow": "Vidovići · Otok Cres · Hrvatska",
+    "subtitle": "Kamena kuća obnovljena 2021., u miru i tišini 280 m iznad kvarnerskog mora.",
+    "cta_contact": "Pošaljite upit",
+    "cta_rooms": "Razgledajte kuću",
+    "image_alt": "Pogled iz Vidovića na zaljev i otoke lošinjskog arhipelaga"
+  },
+  "facts": [
+    { "value": "6", "label": "osoba" },
+    { "value": "3", "label": "spavaće sobe" },
+    { "value": "2", "label": "apartmana" },
+    { "value": "2", "label": "kupaonice" },
+    { "value": "145 m²", "label": "stambenog prostora" },
+    { "value": "280 m", "label": "nadmorske visine" }
+  ],
+  "about": {
+    "kicker": "Kuća",
+    "title": "Jedna od najstarijih kuća u Vidovićima, obnovljena s ljubavlju",
+    "paragraphs": [
+      "Holiday House Antica jedna je od najstarijih kuća u mjestu Vidovići na otoku Cresu. Obnovljena je 2021. godine i ima oko 145 m² raspoređenih na prizemlje i tri kata, s kamenim zidovima, drvenim gredama i zelenim škurama koje čuvaju duh stare otočke gradnje.",
+      "Kuća se sastoji od dva apartmana s odvojenim ulazima – idealno za dvije obitelji ili prijatelje koji putuju zajedno. Ukupno nudi 3 spavaće sobe za 6 osoba, dvije potpuno opremljene kuhinje, dvije blagovaonice, dva dnevna boravka i dvije kupaonice.",
+      "Ispred ulaza nalazi se dvorište i mala terasa s mjestom za šest osoba, a s balkona na trećem katu pruža se prekrasan pogled na Kvarner i Jadransko more."
+    ],
+    "image_alt": "Holiday House Antica – bijela kamena kuća sa zelenim škurama"
+  },
+  "rooms": {
+    "kicker": "Prostorije",
+    "title": "Pogledajte unutrašnjost",
+    "intro": "Odaberite prostoriju i pogledajte njezine fotografije. Kliknite na fotografiju za uvećani prikaz.",
+    "names": {
+      "bedroom-1": "Spavaća soba 1",
+      "bedroom-2": "Spavaća soba 2",
+      "bedroom-3": "Spavaća soba 3",
+      "kitchen-living-1": "Kuhinja i dnevni boravak 1",
+      "kitchen-living-2": "Kuhinja i dnevni boravak 2",
+      "bathroom-1": "Kupaonica 1",
+      "bathroom-2": "Kupaonica 2",
+      "balcony": "Balkon",
+      "yard": "Dvorište i terasa",
+      "surroundings": "Kuća i okolica"
+    }
+  },
+  "amenities": {
+    "kicker": "Sadržaji",
+    "title": "Sve što vam treba za opušten odmor",
+    "items": [
+      { "icon": "wifi", "text": "Besplatan Wi-Fi" },
+      { "icon": "tv", "text": "2 televizora" },
+      { "icon": "climate", "text": "Toplinska pumpa – hlađenje i grijanje" },
+      { "icon": "kitchen", "text": "2 potpuno opremljene kuhinje" },
+      { "icon": "door", "text": "2 apartmana s odvojenim ulazima" },
+      { "icon": "sun", "text": "Dvorište i terasa s mjestom za 6 osoba" },
+      { "icon": "waves", "text": "Balkon s pogledom na more" },
+      { "icon": "parking", "text": "Besplatan javni parking na 100 m" },
+      { "icon": "coffee", "text": "Doručak na upit" },
+      { "icon": "leaf", "text": "Domaća janjetina i krumpir na upit" }
+    ]
+  },
+  "location": {
+    "kicker": "Lokacija",
+    "title": "Mir, tišina i pogled na Kvarner",
+    "paragraphs": [
+      "Vidovići se nalaze na 280 m nadmorske visine, okruženi mirisom mediteranskog bilja, tišinom i netaknutom prirodom. Iz mjesta se pruža panoramski pogled na zaljev, na Osoršćicu – najviši vrh otoka Lošinja – na brojne otočiće lošinjskog arhipelaga i na mjesto Martinšćicu.",
+      "Do Cresa se dolazi trajektom iz Istre (Brestova – Porozina) ili s otoka Krka (Valbiska – Merag); vožnja traje oko 25 minuta."
+    ],
+    "distances": [
+      { "icon": "waves", "value": "2,5 km", "label": "do prve plaže u Martinšćici" },
+      { "icon": "kitchen", "value": "~2 km", "label": "restorani i trgovina u Martinšćici" },
+      { "icon": "parking", "value": "100 m", "label": "besplatan javni parking" },
+      { "icon": "ship", "value": "25 min", "label": "vožnja trajektom do Cresa" }
+    ],
+    "map_title": "Karta – Vidovići, otok Cres",
+    "open_map": "Otvori u Google kartama"
+  },
+  "contact": {
+    "kicker": "Kontakt",
+    "title": "Rezervirajte svoj boravak",
+    "intro": "Nazovite nas ili pošaljite poruku – rado ćemo odgovoriti na sva pitanja o slobodnim terminima i cijenama.",
+    "call": "Nazovite nas",
+    "email": "Pošaljite e-mail",
+    "whatsapp": "WhatsApp",
+    "whatsapp_value": "Pošaljite poruku",
+    "form": {
+      "title": "Pošaljite upit",
+      "name": "Ime i prezime",
+      "arrival": "Dolazak",
+      "departure": "Odlazak",
+      "guests": "Broj osoba",
+      "message": "Poruka",
+      "submit": "Pošalji upit",
+      "note": "Gumb otvara vašu aplikaciju za e-poštu s već ispunjenom porukom.",
+      "subject": "Upit – Holiday House Antica"
+    }
+  },
+  "footer": {
+    "address": "Vidovići, otok Cres, Hrvatska",
+    "rights": "Sva prava pridržana."
+  },
+  "lightbox": {
+    "close": "Zatvori",
+    "prev": "Prethodna fotografija",
+    "next": "Sljedeća fotografija"
+  }
+}

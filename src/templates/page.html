@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="{{lang}}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{t.meta.title}}</title>
+  <meta name="description" content="{{t.meta.description}}">
+  {{html.robots_meta}}
+  <link rel="canonical" href="{{c.site_url}}/{{lang}}/">
+  {{html.hreflang}}
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Holiday House Antica">
+  <meta property="og:title" content="{{t.meta.title}}">
+  <meta property="og:description" content="{{t.meta.description}}">
+  <meta property="og:url" content="{{c.site_url}}/{{lang}}/">
+  <meta property="og:image" content="{{c.site_url}}/{{img.hero.large}}">
+  <meta property="og:locale" content="{{t.meta.locale}}">
+  <meta name="theme-color" content="#2f5a46">
+  <link rel="icon" href="{{root}}assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="{{root}}assets/fonts/jost-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{root}}assets/fonts/cormorant-garamond-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="{{root}}assets/css/style.css?v={{c.version}}">
+  <script>document.documentElement.classList.add('js');</script>
+  <script type="application/ld+json">{{html.jsonld}}</script>
+</head>
+<body>
+
+<header class="site-header" data-header>
+  <div class="container header-inner">
+    <a class="brand" href="#top" aria-label="Holiday House Antica">
+      <span class="brand-sub">Holiday House</span>
+      <span class="brand-name">Antica</span>
+    </a>
+    <nav class="site-nav" id="site-nav" data-nav>
+      <a href="#house">{{t.nav.house}}</a>
+      <a href="#rooms">{{t.nav.rooms}}</a>
+      <a href="#amenities">{{t.nav.amenities}}</a>
+      <a href="#location">{{t.nav.location}}</a>
+      <a href="#contact">{{t.nav.contact}}</a>
+      <div class="lang-switch" role="group" aria-label="{{t.nav.language}}">{{html.lang_switcher}}</div>
+    </nav>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="{{t.nav.menu}}" data-nav-toggle>
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <img class="hero-img" src="{{root}}{{img.hero.large}}" srcset="{{html.hero_srcset}}" sizes="100vw"
+         width="{{img.hero.large_w}}" height="{{img.hero.large_h}}" alt="{{t.hero.image_alt}}" fetchpriority="high">
+    <div class="hero-shade" aria-hidden="true"></div>
+    <div class="container hero-content">
+      <p class="eyebrow">{{t.hero.eyebrow}}</p>
+      <h1>Holiday House <em>Antica</em></h1>
+      <p class="hero-lead">{{t.hero.subtitle}}</p>
+      <div class="hero-actions">
+        <a class="btn btn-light" href="#contact">{{t.hero.cta_contact}}</a>
+        <a class="btn btn-outline-light" href="#rooms">{{t.hero.cta_rooms}}</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <ul class="facts">{{html.facts}}</ul>
+  </div>
+
+  <section class="section about" id="house">
+    <div class="container about-grid">
+      <div class="about-text reveal">
+        <p class="kicker">{{t.about.kicker}}</p>
+        <h2>{{t.about.title}}</h2>
+        {{html.about_paragraphs}}
+      </div>
+      <figure class="about-figure reveal">
+        <img src="{{root}}{{img.about.large}}" width="{{img.about.large_w}}" height="{{img.about.large_h}}"
+             alt="{{t.about.image_alt}}" loading="lazy">
+      </figure>
+    </div>
+  </section>
+
+  <section class="section rooms" id="rooms">
+    <div class="container">
+      <header class="section-head reveal">
+        <p class="kicker">{{t.rooms.kicker}}</p>
+        <h2>{{t.rooms.title}}</h2>
+        <p>{{t.rooms.intro}}</p>
+      </header>
+      <div class="room-tabs" role="tablist" aria-label="{{t.rooms.title}}">{{html.room_tabs}}</div>
+      {{html.room_panels}}
+    </div>
+  </section>
+
+  <section class="section amenities" id="amenities">
+    <div class="container">
+      <header class="section-head reveal">
+        <p class="kicker">{{t.amenities.kicker}}</p>
+        <h2>{{t.amenities.title}}</h2>
+      </header>
+      <ul class="amenity-list">{{html.amenities}}</ul>
+    </div>
+  </section>
+
+  <section class="section location" id="location">
+    <div class="container location-grid">
+      <div class="location-text reveal">
+        <p class="kicker">{{t.location.kicker}}</p>
+        <h2>{{t.location.title}}</h2>
+        {{html.location_paragraphs}}
+      </div>
+      <ul class="distances reveal">{{html.distances}}</ul>
+    </div>
+    <div class="container">
+      <div class="map reveal">
+        <iframe title="{{t.location.map_title}}" src="{{c.map_embed_url}}" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+      <a class="map-link" href="{{c.map_link_url}}" target="_blank" rel="noopener">{{icon.pin}} {{t.location.open_map}}</a>
+    </div>
+  </section>
+
+  <section class="section contact" id="contact">
+    <div class="container contact-grid">
+      <div class="contact-info reveal">
+        <p class="kicker">{{t.contact.kicker}}</p>
+        <h2>{{t.contact.title}}</h2>
+        <p>{{t.contact.intro}}</p>
+        <div class="contact-cards">{{html.contact_cards}}</div>
+      </div>
+
+      <form class="inquiry reveal" data-inquiry data-obf-email="{{obf.email}}" data-subject="{{t.contact.form.subject}}">
+        <h3>{{t.contact.form.title}}</h3>
+        <label class="field">
+          <span>{{t.contact.form.name}}</span>
+          <input type="text" name="name" autocomplete="name" required>
+        </label>
+        <div class="field-row">
+          <label class="field">
+            <span>{{t.contact.form.arrival}}</span>
+            <input type="date" name="arrival" data-arrival>
+          </label>
+          <label class="field">
+            <span>{{t.contact.form.departure}}</span>
+            <input type="date" name="departure" data-departure>
+          </label>
+        </div>
+        <label class="field">
+          <span>{{t.contact.form.guests}}</span>
+          <select name="guests">
+            <option>1</option><option selected>2</option><option>3</option>
+            <option>4</option><option>5</option><option>6</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>{{t.contact.form.message}}</span>
+          <textarea name="message" rows="4"></textarea>
+        </label>
+        <button class="btn btn-primary" type="submit">{{icon.mail}} {{t.contact.form.submit}}</button>
+        <p class="form-note">{{t.contact.form.note}}</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>
+      <p class="footer-brand">Holiday House <em>Antica</em></p>
+      <p>{{t.footer.address}}</p>
+    </div>
+    <div class="footer-contact">
+      <a href="#contact" data-obf-href="{{obf.phone_href}}" data-obf-text="{{obf.phone}}"></a>
+      <a href="#contact" data-obf-href="{{obf.email_href}}" data-obf-text="{{obf.email}}"></a>
+    </div>
+    <div class="lang-switch lang-switch-footer" role="group" aria-label="{{t.nav.language}}">{{html.lang_switcher}}</div>
+  </div>
+  <div class="container footer-bottom">
+    <p>© {{c.year}} Holiday House Antica. {{t.footer.rights}}</p>
+  </div>
+</footer>
+
+<div class="lightbox" role="dialog" aria-modal="true" aria-label="{{t.rooms.title}}" hidden data-lightbox>
+  <button class="lb-btn lb-close" type="button" aria-label="{{t.lightbox.close}}" data-lb-close>{{icon.close}}</button>
+  <button class="lb-btn lb-prev" type="button" aria-label="{{t.lightbox.prev}}" data-lb-prev>{{icon.chevron_left}}</button>
+  <figure class="lb-figure">
+    <img alt="" data-lb-img>
+    <figcaption data-lb-caption></figcaption>
+  </figure>
+  <button class="lb-btn lb-next" type="button" aria-label="{{t.lightbox.next}}" data-lb-next>{{icon.chevron_right}}</button>
+</div>
+
+<script src="{{root}}assets/js/main.js?v={{c.version}}" defer></script>
+</body>
+</html>

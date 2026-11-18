@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Holiday House Antica – Vidovići, Island of Cres</title>
+  <meta name="description" content="Holiday House Antica – a renovated stone holiday house for 6 guests in Vidovići on the island of Cres, Croatia.">
+  {{html.robots_meta}}
+  {{html.hreflang}}
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/style.css?v={{c.version}}">
+  <script>
+    // Send visitors straight to their language: saved choice first, then browser languages.
+    (function () {
+      var langs = {{html.languages_json}};
+      var pick = null;
+      try { pick = localStorage.getItem('lang'); } catch (e) {}
+      if (langs.indexOf(pick) < 0) {
+        pick = null;
+        var prefs = navigator.languages || [navigator.language || ''];
+        for (var i = 0; i < prefs.length && !pick; i++) {
+          var code = String(prefs[i] || '').slice(0, 2).toLowerCase();
+          if (code === 'bs' || code === 'sr' || code === 'sl') code = 'hr';
+          if (langs.indexOf(code) >= 0) pick = code;
+        }
+      }
+      location.replace((pick || '{{c.default_language}}') + '/');
+    })();
+  </script>
+</head>
+<body class="lang-gate">
+  <img class="lang-gate-bg" src="{{img.hero.large}}" alt="">
+  <main class="lang-gate-card">
+    <p class="brand-sub">Holiday House</p>
+    <h1 class="brand-name">Antica</h1>
+    <p>Vidovići · Cres</p>
+    <nav class="lang-gate-links">{{html.lang_gate_links}}</nav>
+  </main>
+</body>
+</html>

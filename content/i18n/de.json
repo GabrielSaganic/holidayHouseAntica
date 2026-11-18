@@ -1,0 +1,120 @@
+{
+  "lang_name": "Deutsch",
+  "meta": {
+    "locale": "de_DE",
+    "title": "Holiday House Antica – Ferienhaus in Vidovići, Insel Cres, Kroatien",
+    "description": "Renoviertes Ferienhaus aus Stein für 6 Personen in Vidovići auf der Insel Cres: 2 Apartments, 3 Schlafzimmer, Balkon mit Meerblick, Hof und Terrasse. Ruhe, Natur und Blick auf die Kvarner Bucht."
+  },
+  "nav": {
+    "house": "Das Haus",
+    "rooms": "Räume",
+    "amenities": "Ausstattung",
+    "location": "Lage",
+    "contact": "Kontakt",
+    "menu": "Menü",
+    "language": "Sprache"
+  },
+  "hero": {
+    "eyebrow": "Vidovići · Insel Cres · Kroatien",
+    "subtitle": "Ein 2021 renoviertes Steinhaus, in Ruhe und Stille 280 m über dem Meer der Kvarner Bucht.",
+    "cta_contact": "Anfrage senden",
+    "cta_rooms": "Das Haus entdecken",
+    "image_alt": "Blick von Vidovići auf die Bucht und die Inseln des Lošinj-Archipels"
+  },
+  "facts": [
+    { "value": "6", "label": "Gäste" },
+    { "value": "3", "label": "Schlafzimmer" },
+    { "value": "2", "label": "Apartments" },
+    { "value": "2", "label": "Badezimmer" },
+    { "value": "145 m²", "label": "Wohnfläche" },
+    { "value": "280 m", "label": "über dem Meer" }
+  ],
+  "about": {
+    "kicker": "Das Haus",
+    "title": "Eines der ältesten Häuser in Vidovići – liebevoll restauriert",
+    "paragraphs": [
+      "Das Holiday House Antica ist eines der ältesten Häuser im Dorf Vidovići auf der Insel Cres. Es wurde 2021 renoviert und bietet auf Erdgeschoss und drei Etagen rund 145 m² – mit Steinmauern, Holzbalken und grünen Fensterläden, die den Charme der alten Inselarchitektur bewahren.",
+      "Das Haus besteht aus zwei Apartments mit separaten Eingängen – ideal für zwei Familien oder Freunde, die gemeinsam reisen. Insgesamt bietet es 3 Schlafzimmer für 6 Personen, zwei voll ausgestattete Küchen, zwei Essbereiche, zwei Wohnzimmer und zwei Badezimmer.",
+      "Vor dem Eingang befinden sich ein Hof und eine kleine Terrasse mit Sitzplätzen für sechs Personen, und vom Balkon im dritten Stock genießen Sie einen wunderschönen Blick auf die Kvarner Bucht und die Adria."
+    ],
+    "image_alt": "Holiday House Antica – das weiße Steinhaus mit grünen Fensterläden"
+  },
+  "rooms": {
+    "kicker": "Räume",
+    "title": "Ein Blick ins Innere",
+    "intro": "Wählen Sie einen Raum, um seine Fotos zu sehen. Klicken Sie auf ein Foto, um es zu vergrößern.",
+    "names": {
+      "bedroom-1": "Schlafzimmer 1",
+      "bedroom-2": "Schlafzimmer 2",
+      "bedroom-3": "Schlafzimmer 3",
+      "kitchen-living-1": "Küche & Wohnzimmer 1",
+      "kitchen-living-2": "Küche & Wohnzimmer 2",
+      "bathroom-1": "Badezimmer 1",
+      "bathroom-2": "Badezimmer 2",
+      "balcony": "Balkon",
+      "yard": "Hof & Terrasse",
+      "surroundings": "Haus & Umgebung"
+    }
+  },
+  "amenities": {
+    "kicker": "Ausstattung",
+    "title": "Alles für einen entspannten Urlaub",
+    "items": [
+      { "icon": "wifi", "text": "Kostenloses WLAN" },
+      { "icon": "tv", "text": "2 Fernseher" },
+      { "icon": "climate", "text": "Wärmepumpe – Kühlung & Heizung" },
+      { "icon": "kitchen", "text": "2 voll ausgestattete Küchen" },
+      { "icon": "door", "text": "2 Apartments mit separaten Eingängen" },
+      { "icon": "sun", "text": "Hof & Terrasse mit Sitzplätzen für 6" },
+      { "icon": "waves", "text": "Balkon mit Meerblick" },
+      { "icon": "parking", "text": "Kostenlose öffentliche Parkplätze in 100 m" },
+      { "icon": "coffee", "text": "Frühstück auf Anfrage" },
+      { "icon": "leaf", "text": "Hausgemachtes Lamm mit Kartoffeln auf Anfrage" }
+    ]
+  },
+  "location": {
+    "kicker": "Lage",
+    "title": "Ruhe, Stille und Blick auf die Kvarner Bucht",
+    "paragraphs": [
+      "Vidovići liegt 280 m über dem Meeresspiegel, umgeben vom Duft mediterraner Kräuter, von Stille und unberührter Natur. Vom Dorf aus haben Sie einen Panoramablick auf die Bucht, auf die Osoršćica – den höchsten Gipfel der Insel Lošinj –, auf die vielen kleinen Inseln des Lošinj-Archipels und auf den Ort Martinšćica.",
+      "Die Insel Cres erreichen Sie mit der Fähre von Istrien (Brestova – Porozina) oder von der Insel Krk (Valbiska – Merag); die Überfahrt dauert etwa 25 Minuten."
+    ],
+    "distances": [
+      { "icon": "waves", "value": "2,5 km", "label": "zum ersten Strand in Martinšćica" },
+      { "icon": "kitchen", "value": "~2 km", "label": "Restaurants & Markt in Martinšćica" },
+      { "icon": "parking", "value": "100 m", "label": "kostenloser öffentlicher Parkplatz" },
+      { "icon": "ship", "value": "25 Min.", "label": "Fährüberfahrt nach Cres" }
+    ],
+    "map_title": "Karte – Vidovići, Insel Cres",
+    "open_map": "In Google Maps öffnen"
+  },
+  "contact": {
+    "kicker": "Kontakt",
+    "title": "Planen Sie Ihren Aufenthalt",
+    "intro": "Rufen Sie uns an oder schreiben Sie uns – wir beantworten gerne alle Fragen zu Verfügbarkeit und Preisen.",
+    "call": "Rufen Sie uns an",
+    "email": "E-Mail senden",
+    "whatsapp": "WhatsApp",
+    "whatsapp_value": "Nachricht senden",
+    "form": {
+      "title": "Anfrage senden",
+      "name": "Ihr Name",
+      "arrival": "Anreise",
+      "departure": "Abreise",
+      "guests": "Anzahl der Gäste",
+      "message": "Nachricht",
+      "submit": "Anfrage senden",
+      "note": "Die Schaltfläche öffnet Ihr E-Mail-Programm mit einer vorausgefüllten Nachricht.",
+      "subject": "Anfrage – Holiday House Antica"
+    }
+  },
+  "footer": {
+    "address": "Vidovići, Insel Cres, Kroatien",
+    "rights": "Alle Rechte vorbehalten."
+  },
+  "lightbox": {
+    "close": "Schließen",
+    "prev": "Vorheriges Foto",
+    "next": "Nächstes Foto"
+  }
+}

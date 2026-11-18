@@ -1,0 +1,62 @@
+# Builds the site with build.py and publishes dist/ to GitHub Pages on every push to main.
+#
+# Real contact details are NOT stored in the repository. Set them under
+#   Settings → Secrets and variables → Actions
+#     Secrets:   SITE_PHONE     e.g. +385 91 123 4567
+#                SITE_EMAIL     e.g. info@your-domain.com
+#                SITE_WHATSAPP  digits only, e.g. 385911234567 (optional)
+#     Variables: SITE_URL       e.g. https://www.your-domain.com (optional)
+# Missing values fall back to the placeholders in content/config.json.
+
+name: Deploy site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install Pillow
+
+      - name: Build site
+        run: python build.py
+        env:
+          SITE_PHONE: ${{ secrets.SITE_PHONE }}
+          SITE_EMAIL: ${{ secrets.SITE_EMAIL }}
+          SITE_WHATSAPP: ${{ secrets.SITE_WHATSAPP }}
+          SITE_URL: ${{ vars.SITE_URL }}
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,31 @@
+{
+  "test_mode": true,
+  "site_url": "https://www.holidayhouseantica.com",
+  "phone": "+385 91 000 0000",
+  "email": "info@example.com",
+  "whatsapp": "385910000000",
+
+  "address_locality": "Vidovići",
+  "address_region": "Primorje-Gorski Kotar",
+  "address_country": "HR",
+  "map_query": "Vidovići, Cres, Croatia",
+
+  "languages": ["hr", "en", "de", "it"],
+  "default_language": "en",
+
+  "hero_image": "surroundings/01-1678183013.jpg",
+  "about_image": "surroundings/03-1678183055.jpg",
+
+  "rooms": [
+    "bedroom-1",
+    "bedroom-2",
+    "bedroom-3",
+    "kitchen-living-1",
+    "kitchen-living-2",
+    "bathroom-1",
+    "bathroom-2",
+    "balcony",
+    "yard",
+    "surroundings"
+  ]
+}

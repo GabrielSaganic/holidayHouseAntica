@@ -1,0 +1,4 @@
+dist/
+__pycache__/
+# original downloads – the site uses the copies in photos/
+/*.jpg
