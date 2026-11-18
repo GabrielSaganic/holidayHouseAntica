@@ -52,8 +52,7 @@
       "bathroom-1": "Badezimmer 1",
       "bathroom-2": "Badezimmer 2",
       "balcony": "Balkon",
-      "yard": "Hof & Terrasse",
-      "surroundings": "Haus & Umgebung"
+      "surroundings": "Hof, Terrasse & Umgebung"
     }
   },
   "amenities": {
@@ -67,9 +66,7 @@
       { "icon": "door", "text": "2 Apartments mit separaten Eingängen" },
       { "icon": "sun", "text": "Hof & Terrasse mit Sitzplätzen für 6" },
       { "icon": "waves", "text": "Balkon mit Meerblick" },
-      { "icon": "parking", "text": "Kostenlose öffentliche Parkplätze in 100 m" },
-      { "icon": "coffee", "text": "Frühstück auf Anfrage" },
-      { "icon": "leaf", "text": "Hausgemachtes Lamm mit Kartoffeln auf Anfrage" }
+      { "icon": "parking", "text": "Kostenlose öffentliche Parkplätze in 100 m" }
     ]
   },
   "location": {

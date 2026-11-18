@@ -52,8 +52,7 @@
       "bathroom-1": "Bagno 1",
       "bathroom-2": "Bagno 2",
       "balcony": "Balcone",
-      "yard": "Cortile e terrazza",
-      "surroundings": "Casa e dintorni"
+      "surroundings": "Cortile, terrazza e dintorni"
     }
   },
   "amenities": {
@@ -67,9 +66,7 @@
       { "icon": "door", "text": "2 appartamenti con ingressi separati" },
       { "icon": "sun", "text": "Cortile e terrazza con posti a sedere per 6" },
       { "icon": "waves", "text": "Balcone con vista mare" },
-      { "icon": "parking", "text": "Parcheggio pubblico gratuito a 100 m" },
-      { "icon": "coffee", "text": "Colazione su richiesta" },
-      { "icon": "leaf", "text": "Agnello e patate fatti in casa su richiesta" }
+      { "icon": "parking", "text": "Parcheggio pubblico gratuito a 100 m" }
     ]
   },
   "location": {

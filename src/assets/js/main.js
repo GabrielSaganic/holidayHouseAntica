@@ -59,7 +59,6 @@
       document.getElementById(t.getAttribute('aria-controls')).classList.toggle('is-active', active);
     });
     if (moveFocus) tab.focus();
-    tab.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: reduceMotion ? 'auto' : 'smooth' });
   }
 
   tabs.forEach(function (tab, i) {

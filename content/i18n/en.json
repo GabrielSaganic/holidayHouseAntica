@@ -52,8 +52,7 @@
       "bathroom-1": "Bathroom 1",
       "bathroom-2": "Bathroom 2",
       "balcony": "Balcony",
-      "yard": "Yard & terrace",
-      "surroundings": "House & surroundings"
+      "surroundings": "Yard, terrace & surroundings"
     }
   },
   "amenities": {
@@ -67,9 +66,7 @@
       { "icon": "door", "text": "2 apartments with separate entrances" },
       { "icon": "sun", "text": "Yard & terrace with seating for 6" },
       { "icon": "waves", "text": "Balcony with sea view" },
-      { "icon": "parking", "text": "Free public parking 100 m away" },
-      { "icon": "coffee", "text": "Breakfast on request" },
-      { "icon": "leaf", "text": "Homemade lamb & potatoes on request" }
+      { "icon": "parking", "text": "Free public parking 100 m away" }
     ]
   },
   "location": {

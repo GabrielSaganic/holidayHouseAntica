@@ -52,8 +52,7 @@
       "bathroom-1": "Kupaonica 1",
       "bathroom-2": "Kupaonica 2",
       "balcony": "Balkon",
-      "yard": "Dvorište i terasa",
-      "surroundings": "Kuća i okolica"
+      "surroundings": "Dvorište, terasa i okolica"
     }
   },
   "amenities": {
@@ -67,9 +66,7 @@
       { "icon": "door", "text": "2 apartmana s odvojenim ulazima" },
       { "icon": "sun", "text": "Dvorište i terasa s mjestom za 6 osoba" },
       { "icon": "waves", "text": "Balkon s pogledom na more" },
-      { "icon": "parking", "text": "Besplatan javni parking na 100 m" },
-      { "icon": "coffee", "text": "Doručak na upit" },
-      { "icon": "leaf", "text": "Domaća janjetina i krumpir na upit" }
+      { "icon": "parking", "text": "Besplatan javni parking na 100 m" }
     ]
   },
   "location": {

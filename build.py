@@ -187,7 +187,7 @@ def block_rooms(rooms: list, t: dict, root: str) -> tuple:
             f'<div class="room-panel{" is-active" if active else ""}" role="tabpanel" id="panel-{room["id"]}" '
             f'aria-labelledby="tab-{room["id"]}" tabindex="0">'
             f'<div class="room-panel-title"><h3>{esc(name)}</h3></div>'
-            f'<div class="gallery" data-count="{min(len(tiles), 4)}">{"".join(tiles)}</div></div>'
+            f'<div class="gallery" data-count="{len(tiles)}">{"".join(tiles)}</div></div>'
         )
     return "".join(tabs), "\n".join(panels)
 
