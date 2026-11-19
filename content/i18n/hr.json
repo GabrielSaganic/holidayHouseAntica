@@ -3,7 +3,7 @@
   "meta": {
     "locale": "hr_HR",
     "title": "Holiday House Antica – kuća za odmor, Vidovići, otok Cres",
-    "description": "Obnovljena kamena kuća za odmor za 6 osoba u Vidovićima na otoku Cresu: 2 apartmana, 3 spavaće sobe, balkon s pogledom na more, dvorište i terasa. Mir, priroda i pogled na Kvarner."
+    "description": "Obnovljena kamena kuća za odmor za 6 osoba u Vidovićima na otoku Cresu: 3 spavaće sobe, 2 kuhinje, 2 kupaonice, balkon s pogledom na more, dvorište i terasa. Mir, priroda i pogled na Kvarner."
   },
   "nav": {
     "house": "Kuća",
@@ -12,7 +12,8 @@
     "location": "Lokacija",
     "contact": "Kontakt",
     "menu": "Izbornik",
-    "language": "Jezik"
+    "language": "Jezik",
+    "prices": "Cijene"
   },
   "hero": {
     "eyebrow": "Vidovići · Otok Cres · Hrvatska",
@@ -22,19 +23,37 @@
     "image_alt": "Pogled iz Vidovića na zaljev i otoke lošinjskog arhipelaga"
   },
   "facts": [
-    { "value": "6", "label": "osoba" },
-    { "value": "3", "label": "spavaće sobe" },
-    { "value": "2", "label": "apartmana" },
-    { "value": "2", "label": "kupaonice" },
-    { "value": "145 m²", "label": "stambenog prostora" },
-    { "value": "280 m", "label": "nadmorske visine" }
+    {
+      "value": "6",
+      "label": "osoba"
+    },
+    {
+      "value": "3",
+      "label": "spavaće sobe"
+    },
+    {
+      "value": "2",
+      "label": "kuhinje"
+    },
+    {
+      "value": "2",
+      "label": "kupaonice"
+    },
+    {
+      "value": "145 m²",
+      "label": "stambenog prostora"
+    },
+    {
+      "value": "280 m",
+      "label": "nadmorske visine"
+    }
   ],
   "about": {
     "kicker": "Kuća",
     "title": "Jedna od najstarijih kuća u Vidovićima, obnovljena s ljubavlju",
     "paragraphs": [
       "Holiday House Antica jedna je od najstarijih kuća u mjestu Vidovići na otoku Cresu. Obnovljena je 2021. godine i ima oko 145 m² raspoređenih na prizemlje i tri kata, s kamenim zidovima, drvenim gredama i zelenim škurama koje čuvaju duh stare otočke gradnje.",
-      "Kuća se sastoji od dva apartmana s odvojenim ulazima – idealno za dvije obitelji ili prijatelje koji putuju zajedno. Ukupno nudi 3 spavaće sobe za 6 osoba, dvije potpuno opremljene kuhinje, dvije blagovaonice, dva dnevna boravka i dvije kupaonice.",
+      "Kuća se iznajmljuje u cijelosti i ima dvije stambene cjeline koje su iznutra povezane, pa se iz jedne slobodno prelazi u drugu. Svaka ima vlastiti ulaz, kuhinju, blagovaonicu, dnevni boravak i kupaonicu – idealno za veću obitelj ili dvije obitelji koje putuju zajedno. Ukupno kuća nudi 3 spavaće sobe za 6 osoba.",
       "Ispred ulaza nalazi se dvorište i mala terasa s mjestom za šest osoba, a s balkona na trećem katu pruža se prekrasan pogled na Kvarner i Jadransko more."
     ],
     "image_alt": "Holiday House Antica – bijela kamena kuća sa zelenim škurama"
@@ -59,15 +78,81 @@
     "kicker": "Sadržaji",
     "title": "Sve što vam treba za opušten odmor",
     "items": [
-      { "icon": "wifi", "text": "Besplatan Wi-Fi" },
-      { "icon": "tv", "text": "2 televizora" },
-      { "icon": "climate", "text": "Toplinska pumpa – hlađenje i grijanje" },
-      { "icon": "kitchen", "text": "2 potpuno opremljene kuhinje" },
-      { "icon": "door", "text": "2 apartmana s odvojenim ulazima" },
-      { "icon": "sun", "text": "Dvorište i terasa s mjestom za 6 osoba" },
-      { "icon": "waves", "text": "Balkon s pogledom na more" },
-      { "icon": "parking", "text": "Besplatan javni parking na 100 m" }
+      {
+        "icon": "wifi",
+        "text": "Besplatan Wi-Fi"
+      },
+      {
+        "icon": "tv",
+        "text": "2 televizora"
+      },
+      {
+        "icon": "climate",
+        "text": "Toplinska pumpa – hlađenje i grijanje"
+      },
+      {
+        "icon": "kitchen",
+        "text": "2 potpuno opremljene kuhinje"
+      },
+      {
+        "icon": "door",
+        "text": "Dvije cjeline povezane iznutra, svaka s vlastitim ulazom"
+      },
+      {
+        "icon": "sun",
+        "text": "Dvorište i terasa s mjestom za 6 osoba"
+      },
+      {
+        "icon": "waves",
+        "text": "Balkon s pogledom na more"
+      },
+      {
+        "icon": "parking",
+        "text": "Besplatan javni parking na 100 m"
+      }
     ]
+  },
+  "reviews": {
+    "kicker": "Dojmovi gostiju",
+    "title": "Što kažu naši gosti",
+    "score_word": "Izuzetno",
+    "based_on": "Ocjena gostiju na Booking.com · broj recenzija: {count}",
+    "categories": {
+      "staff": "Domaćini",
+      "facilities": "Sadržaji",
+      "cleanliness": "Čistoća",
+      "comfort": "Udobnost",
+      "value": "Omjer cijene i kvalitete"
+    },
+    "read_more": "Pogledajte recenzije na Booking.com",
+    "quotes": []
+  },
+  "prices": {
+    "kicker": "Cijene",
+    "title": "Cijene i slobodni termini",
+    "intro": "Ispod svakog datuma u kalendaru piše cijena po noći za cijelu kuću (do 6 osoba), u eurima.",
+    "price_pattern": "{p} €",
+    "notes": [
+      "Datumi bez cijene nisu u ponudi – za njih nam pošaljite upit.",
+      "Za duže boravke javite nam se za posebnu ponudu."
+    ]
+  },
+  "calendar": {
+    "title": "Kalendar zauzetosti",
+    "free": "Slobodno",
+    "booked": "Zauzeto",
+    "selected": "Vaš odabir",
+    "prev": "Prethodni mjesec",
+    "next": "Sljedeći mjesec",
+    "hint": "Kliknite na datum dolaska, a zatim na datum odlaska.",
+    "pick_departure": "Sada odaberite datum odlaska.",
+    "selection": "{from} – {to} · noćenja: {n}",
+    "total": "ukupno {price}",
+    "min_stay": "Minimalni boravak u tom razdoblju je {n} noći.",
+    "cta": "Pošalji upit za ove datume",
+    "clear": "Poništi",
+    "note": "Kalendar služi kao orijentacija – raspoloživost potvrđujemo u odgovoru na vaš upit.",
+    "updated": "Ažurirano: {date}"
   },
   "location": {
     "kicker": "Lokacija",
@@ -77,18 +162,82 @@
       "Do Cresa se dolazi trajektom iz Istre (Brestova – Porozina) ili s otoka Krka (Valbiska – Merag); vožnja traje oko 25 minuta."
     ],
     "distances": [
-      { "icon": "waves", "value": "2,5 km", "label": "do prve plaže u Martinšćici" },
-      { "icon": "kitchen", "value": "~2 km", "label": "restorani i trgovina u Martinšćici" },
-      { "icon": "parking", "value": "100 m", "label": "besplatan javni parking" },
-      { "icon": "ship", "value": "25 min", "label": "vožnja trajektom do Cresa" }
+      {
+        "icon": "waves",
+        "value": "2,5 km",
+        "label": "do prve plaže u Martinšćici"
+      },
+      {
+        "icon": "kitchen",
+        "value": "~2 km",
+        "label": "restorani i trgovina u Martinšćici"
+      },
+      {
+        "icon": "parking",
+        "value": "100 m",
+        "label": "besplatan javni parking"
+      },
+      {
+        "icon": "ship",
+        "value": "25 min",
+        "label": "vožnja trajektom do otoka Cresa"
+      }
     ],
     "map_title": "Karta – Vidovići, otok Cres",
     "open_map": "Otvori u Google kartama"
+  },
+  "explore": {
+    "kicker": "Okolica",
+    "title": "Što posjetiti na Cresu i Lošinju",
+    "intro": "Vidovići su odlična polazna točka za izlete po cijelom otočju. Udaljenosti su okvirne, automobilom.",
+    "items": [
+      {
+        "name": "Martinšćica",
+        "distance": "~2 km",
+        "text": "Najbliže mjesto uz more: šljunčane plaže, restorani, trgovina i mala lučica."
+      },
+      {
+        "name": "Vransko jezero",
+        "distance": "~10 km",
+        "text": "Jedinstveno slatkovodno jezero usred otoka i izvor pitke vode za Cres i Lošinj. S ceste se pruža lijep pogled."
+      },
+      {
+        "name": "Lubenice",
+        "distance": "~15 km",
+        "text": "Kameno selo na litici 378 m iznad mora, jedno od najljepših mjesta na Jadranu. Ispod njega je skrivena plaža Sveti Ivan."
+      },
+      {
+        "name": "Osor",
+        "distance": "~20 km",
+        "text": "Drevni gradić na mjestu gdje se Cres i Lošinj gotovo dodiruju, s pokretnim mostom i skulpturama na otvorenom."
+      },
+      {
+        "name": "Valun",
+        "distance": "~25 km",
+        "text": "Ribarsko mjestašce s lijepim plažama i Valunskom pločom, jednim od najstarijih glagoljskih natpisa."
+      },
+      {
+        "name": "Grad Cres",
+        "distance": "~30 km",
+        "text": "Mletačka gradska jezgra, uske ulice, lučica i trg s ložom – idealno za šetnju i kavu uz more."
+      },
+      {
+        "name": "Mali Lošinj",
+        "distance": "~40 km",
+        "text": "Najveći grad otočja: šetnica uz more, Veli Lošinj, uvala Čikat i izleti brodom do Suska i Ilovika."
+      },
+      {
+        "name": "Beli i Tramuntana",
+        "distance": "~55 km",
+        "text": "Selo na sjeveru otoka, okruženo prastarom šumom Tramuntane, poznato po bjeloglavim supovima."
+      }
+    ]
   },
   "contact": {
     "kicker": "Kontakt",
     "title": "Rezervirajte svoj boravak",
     "intro": "Nazovite nas ili pošaljite poruku – rado ćemo odgovoriti na sva pitanja o slobodnim terminima i cijenama.",
+    "how_to_book": "Pošaljite nam upit – potvrdit ćemo slobodan termin i cijenu.",
     "call": "Nazovite nas",
     "email": "Pošaljite e-mail",
     "whatsapp": "WhatsApp",
@@ -102,16 +251,80 @@
       "message": "Poruka",
       "submit": "Pošalji upit",
       "note": "Gumb otvara vašu aplikaciju za e-poštu s već ispunjenom porukom.",
-      "subject": "Upit – Holiday House Antica"
+      "subject": "Upit – Holiday House Antica",
+      "fallback": "Ako se nije otvorila aplikacija za e-poštu, pošaljite upit na jedan od ovih načina:",
+      "via_whatsapp": "Pošalji preko WhatsAppa",
+      "via_gmail": "Otvori u Gmailu",
+      "copy": "Kopiraj poruku",
+      "copied": "Kopirano!",
+      "to": "Za"
     }
+  },
+  "fab": {
+    "label": "Brzi kontakt",
+    "call": "Nazovite",
+    "whatsapp": "WhatsApp"
   },
   "footer": {
     "address": "Vidovići, otok Cres, Hrvatska",
-    "rights": "Sva prava pridržana."
+    "rights": "Sva prava pridržana.",
+    "privacy": "Pravila privatnosti"
   },
   "lightbox": {
     "close": "Zatvori",
     "prev": "Prethodna fotografija",
     "next": "Sljedeća fotografija"
+  },
+  "privacy": {
+    "title": "Pravila privatnosti",
+    "description": "Kako Holiday House Antica postupa s vašim osobnim podacima.",
+    "back": "Natrag na početnu stranicu",
+    "contact": "Pitanja o privatnosti pošaljite na:",
+    "sections": [
+      {
+        "h": "Tko smo",
+        "p": [
+          "Ova stranica predstavlja kuću za odmor Holiday House Antica u Vidovićima na otoku Cresu. Za sva pitanja o privatnosti javite nam se e-poštom (adresa je na dnu stranice)."
+        ]
+      },
+      {
+        "h": "Koje podatke prikupljamo",
+        "p": [
+          "Stranica nema korisničkih računa, analitike ni oglasnih kolačića i ne sprema vaše osobne podatke na poslužitelju.",
+          "Obrazac za upit ne šalje podatke preko stranice – samo otvara vašu aplikaciju za e-poštu s pripremljenom porukom. Vaše podatke dobivamo tek kad nam sami pošaljete e-poruku ili poruku na WhatsApp, odnosno kad nas nazovete."
+        ]
+      },
+      {
+        "h": "Kako koristimo podatke",
+        "p": [
+          "Podatke iz upita (ime, kontakt, datume, broj osoba i poruku) koristimo isključivo kako bismo odgovorili na upit i dogovorili vaš boravak. Ne prodajemo ih i ne dijelimo s trećima, osim kad to nalaže zakon (npr. obvezna prijava gostiju u sustav eVisitor)."
+        ]
+      },
+      {
+        "h": "Usluge trećih strana",
+        "p": [
+          "Stranica se poslužuje putem usluge GitHub Pages (GitHub Inc.), koja radi sigurnosti i rada može bilježiti IP adrese posjetitelja.",
+          "Karta lokacije učitava se s Google Maps. Pritom Google može obrađivati vaše podatke i postavljati kolačiće prema vlastitim pravilima privatnosti.",
+          "Fontovi se učitavaju izravno s ove stranice, bez vanjskih servisa."
+        ]
+      },
+      {
+        "h": "Lokalna pohrana u pregledniku",
+        "p": [
+          "Stranica u vašem pregledniku pamti samo odabrani jezik (localStorage), kako bi se sljedeći put otvorila na istom jeziku. Taj podatak ne napušta vaš uređaj."
+        ]
+      },
+      {
+        "h": "Vaša prava",
+        "p": [
+          "Prema Općoj uredbi o zaštiti podataka (GDPR) imate pravo na pristup, ispravak i brisanje svojih podataka te pravo na prigovor Agenciji za zaštitu osobnih podataka (AZOP). Za ostvarivanje prava javite nam se e-poštom."
+        ]
+      }
+    ]
+  },
+  "notfound": {
+    "title": "Stranica nije pronađena",
+    "text": "Stranica koju tražite ne postoji ili je premještena.",
+    "home": "Na početnu stranicu"
   }
 }

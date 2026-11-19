@@ -3,7 +3,7 @@
   "meta": {
     "locale": "en_GB",
     "title": "Holiday House Antica – Vidovići, Island of Cres, Croatia",
-    "description": "Renovated stone holiday house for 6 guests in Vidovići on the island of Cres: 2 apartments, 3 bedrooms, sea-view balcony, yard and terrace. Peace, nature and a view over the Kvarner."
+    "description": "Renovated stone holiday house for 6 guests in Vidovići on the island of Cres: 3 bedrooms, 2 kitchens, 2 bathrooms, sea-view balcony, yard and terrace. Peace, nature and a view over the Kvarner."
   },
   "nav": {
     "house": "The house",
@@ -12,7 +12,8 @@
     "location": "Location",
     "contact": "Contact",
     "menu": "Menu",
-    "language": "Language"
+    "language": "Language",
+    "prices": "Prices"
   },
   "hero": {
     "eyebrow": "Vidovići · Island of Cres · Croatia",
@@ -22,19 +23,37 @@
     "image_alt": "View from Vidovići over the bay and the islands of the Lošinj archipelago"
   },
   "facts": [
-    { "value": "6", "label": "guests" },
-    { "value": "3", "label": "bedrooms" },
-    { "value": "2", "label": "apartments" },
-    { "value": "2", "label": "bathrooms" },
-    { "value": "145 m²", "label": "living space" },
-    { "value": "280 m", "label": "above sea level" }
+    {
+      "value": "6",
+      "label": "guests"
+    },
+    {
+      "value": "3",
+      "label": "bedrooms"
+    },
+    {
+      "value": "2",
+      "label": "kitchens"
+    },
+    {
+      "value": "2",
+      "label": "bathrooms"
+    },
+    {
+      "value": "145 m²",
+      "label": "living space"
+    },
+    {
+      "value": "280 m",
+      "label": "above sea level"
+    }
   ],
   "about": {
     "kicker": "The house",
     "title": "One of the oldest houses in Vidovići, lovingly restored",
     "paragraphs": [
       "Holiday House Antica is one of the oldest houses in the village of Vidovići on the island of Cres. Renovated in 2021, it offers about 145 m² over a ground floor and three upper floors, with stone walls, wooden beams and green shutters that keep the spirit of old island architecture.",
-      "The house consists of two apartments with separate entrances – ideal for two families or friends travelling together. Together they offer 3 bedrooms for 6 guests, two fully equipped kitchens, two dining areas, two living rooms and two bathrooms.",
+      "The house is rented as a whole and has two living areas that are connected inside, so you can move freely from one to the other. Each has its own entrance, kitchen, dining area, living room and bathroom – ideal for a large family or two families travelling together. Altogether the house offers 3 bedrooms for 6 guests.",
       "In front of the entrance there is a yard and a small terrace with seating for six, and from the balcony on the third floor you can enjoy a beautiful view of the Kvarner Gulf and the Adriatic Sea."
     ],
     "image_alt": "Holiday House Antica – the white stone house with green shutters"
@@ -59,15 +78,81 @@
     "kicker": "Amenities",
     "title": "Everything you need for a relaxed holiday",
     "items": [
-      { "icon": "wifi", "text": "Free Wi-Fi" },
-      { "icon": "tv", "text": "2 TVs" },
-      { "icon": "climate", "text": "Heat pump – cooling & heating" },
-      { "icon": "kitchen", "text": "2 fully equipped kitchens" },
-      { "icon": "door", "text": "2 apartments with separate entrances" },
-      { "icon": "sun", "text": "Yard & terrace with seating for 6" },
-      { "icon": "waves", "text": "Balcony with sea view" },
-      { "icon": "parking", "text": "Free public parking 100 m away" }
+      {
+        "icon": "wifi",
+        "text": "Free Wi-Fi"
+      },
+      {
+        "icon": "tv",
+        "text": "2 TVs"
+      },
+      {
+        "icon": "climate",
+        "text": "Heat pump – cooling & heating"
+      },
+      {
+        "icon": "kitchen",
+        "text": "2 fully equipped kitchens"
+      },
+      {
+        "icon": "door",
+        "text": "Two connected living areas, each with its own entrance"
+      },
+      {
+        "icon": "sun",
+        "text": "Yard & terrace with seating for 6"
+      },
+      {
+        "icon": "waves",
+        "text": "Balcony with sea view"
+      },
+      {
+        "icon": "parking",
+        "text": "Free public parking 100 m away"
+      }
     ]
+  },
+  "reviews": {
+    "kicker": "Guest reviews",
+    "title": "What our guests say",
+    "score_word": "Exceptional",
+    "based_on": "Guest rating on Booking.com · reviews: {count}",
+    "categories": {
+      "staff": "Hosts",
+      "facilities": "Facilities",
+      "cleanliness": "Cleanliness",
+      "comfort": "Comfort",
+      "value": "Value for money"
+    },
+    "read_more": "Read the reviews on Booking.com",
+    "quotes": []
+  },
+  "prices": {
+    "kicker": "Prices",
+    "title": "Prices & availability",
+    "intro": "The price under each date in the calendar is per night for the whole house (up to 6 guests), in euros.",
+    "price_pattern": "€{p}",
+    "notes": [
+      "Dates without a price are not available online – send us an inquiry for them.",
+      "Staying longer? Ask us for a special offer."
+    ]
+  },
+  "calendar": {
+    "title": "Availability calendar",
+    "free": "Available",
+    "booked": "Booked",
+    "selected": "Your dates",
+    "prev": "Previous month",
+    "next": "Next month",
+    "hint": "Click your arrival date, then your departure date.",
+    "pick_departure": "Now choose your departure date.",
+    "selection": "{from} – {to} · nights: {n}",
+    "total": "total {price}",
+    "min_stay": "The minimum stay in this period is {n} nights.",
+    "cta": "Send an inquiry for these dates",
+    "clear": "Clear",
+    "note": "The calendar is a guide – we confirm availability when we reply to your inquiry.",
+    "updated": "Updated: {date}"
   },
   "location": {
     "kicker": "Location",
@@ -77,18 +162,82 @@
       "Cres is reached by ferry from Istria (Brestova – Porozina) or from the island of Krk (Valbiska – Merag); the crossing takes about 25 minutes."
     ],
     "distances": [
-      { "icon": "waves", "value": "2.5 km", "label": "to the first beach in Martinšćica" },
-      { "icon": "kitchen", "value": "~2 km", "label": "restaurants & market in Martinšćica" },
-      { "icon": "parking", "value": "100 m", "label": "free public parking" },
-      { "icon": "ship", "value": "25 min", "label": "ferry crossing to Cres" }
+      {
+        "icon": "waves",
+        "value": "2.5 km",
+        "label": "to the first beach in Martinšćica"
+      },
+      {
+        "icon": "kitchen",
+        "value": "~2 km",
+        "label": "restaurants & market in Martinšćica"
+      },
+      {
+        "icon": "parking",
+        "value": "100 m",
+        "label": "free public parking"
+      },
+      {
+        "icon": "ship",
+        "value": "25 min",
+        "label": "ferry crossing to the island of Cres"
+      }
     ],
     "map_title": "Map – Vidovići, island of Cres",
     "open_map": "Open in Google Maps"
+  },
+  "explore": {
+    "kicker": "Surroundings",
+    "title": "What to see on Cres and Lošinj",
+    "intro": "Vidovići is a great base for exploring the whole archipelago. Distances are approximate, by car.",
+    "items": [
+      {
+        "name": "Martinšćica",
+        "distance": "~2 km",
+        "text": "The nearest seaside village: pebble beaches, restaurants, a shop and a small harbour."
+      },
+      {
+        "name": "Lake Vrana",
+        "distance": "~10 km",
+        "text": "A unique freshwater lake in the middle of the island and the source of drinking water for Cres and Lošinj, with lovely views from the road."
+      },
+      {
+        "name": "Lubenice",
+        "distance": "~15 km",
+        "text": "A stone village perched on a cliff 378 m above the sea – one of the most beautiful spots on the Adriatic. The hidden beach of Sveti Ivan lies below."
+      },
+      {
+        "name": "Osor",
+        "distance": "~20 km",
+        "text": "An ancient little town where Cres and Lošinj almost touch, with a swing bridge and open-air sculptures."
+      },
+      {
+        "name": "Valun",
+        "distance": "~25 km",
+        "text": "A fishing village with lovely beaches and the Valun Tablet, one of the oldest Glagolitic inscriptions."
+      },
+      {
+        "name": "Cres town",
+        "distance": "~30 km",
+        "text": "A Venetian old town with narrow streets, a small harbour and a square with a loggia – perfect for a stroll and a coffee by the sea."
+      },
+      {
+        "name": "Mali Lošinj",
+        "distance": "~40 km",
+        "text": "The largest town of the archipelago: a seaside promenade, Veli Lošinj, Čikat bay and boat trips to Susak and Ilovik."
+      },
+      {
+        "name": "Beli & Tramuntana",
+        "distance": "~55 km",
+        "text": "A village in the north of the island, surrounded by the ancient Tramuntana forest and known for its griffon vultures."
+      }
+    ]
   },
   "contact": {
     "kicker": "Contact",
     "title": "Plan your stay at Antica",
     "intro": "Call us or send a message – we will gladly answer any question about availability and prices.",
+    "how_to_book": "Send us an inquiry – we will confirm availability and the price.",
     "call": "Call us",
     "email": "Send an e-mail",
     "whatsapp": "WhatsApp",
@@ -102,16 +251,80 @@
       "message": "Message",
       "submit": "Send inquiry",
       "note": "The button opens your e-mail app with a pre-filled message.",
-      "subject": "Inquiry – Holiday House Antica"
+      "subject": "Inquiry – Holiday House Antica",
+      "fallback": "If your e-mail app didn't open, send the inquiry one of these ways:",
+      "via_whatsapp": "Send via WhatsApp",
+      "via_gmail": "Open in Gmail",
+      "copy": "Copy message",
+      "copied": "Copied!",
+      "to": "To"
     }
+  },
+  "fab": {
+    "label": "Quick contact",
+    "call": "Call",
+    "whatsapp": "WhatsApp"
   },
   "footer": {
     "address": "Vidovići, island of Cres, Croatia",
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "privacy": "Privacy policy"
   },
   "lightbox": {
     "close": "Close",
     "prev": "Previous photo",
     "next": "Next photo"
+  },
+  "privacy": {
+    "title": "Privacy policy",
+    "description": "How Holiday House Antica handles your personal data.",
+    "back": "Back to the home page",
+    "contact": "Send privacy questions to:",
+    "sections": [
+      {
+        "h": "Who we are",
+        "p": [
+          "This website presents Holiday House Antica, a holiday home in Vidovići on the island of Cres. For any privacy question, contact us by e-mail (the address is at the bottom of this page)."
+        ]
+      },
+      {
+        "h": "What data we collect",
+        "p": [
+          "The website has no user accounts, no analytics and no advertising cookies, and it stores none of your personal data on a server.",
+          "The inquiry form does not send anything through the website – it only opens your e-mail app with a prepared message. We receive your data only when you send us an e-mail or a WhatsApp message yourself, or when you call us."
+        ]
+      },
+      {
+        "h": "How we use your data",
+        "p": [
+          "We use the details from your inquiry (name, contact, dates, number of guests and message) only to answer it and arrange your stay. We do not sell them or share them with third parties, except where required by law (e.g. the mandatory guest registration in the Croatian eVisitor system)."
+        ]
+      },
+      {
+        "h": "Third-party services",
+        "p": [
+          "The website is served by GitHub Pages (GitHub Inc.), which may log visitors' IP addresses for security and operational purposes.",
+          "The location map is loaded from Google Maps. Google may process your data and set cookies according to its own privacy policy.",
+          "Fonts are loaded directly from this website, without external services."
+        ]
+      },
+      {
+        "h": "Local storage in your browser",
+        "p": [
+          "The website only remembers your chosen language in your browser (localStorage), so that it opens in the same language next time. This never leaves your device."
+        ]
+      },
+      {
+        "h": "Your rights",
+        "p": [
+          "Under the General Data Protection Regulation (GDPR) you have the right to access, correct and delete your data, and the right to lodge a complaint with the Croatian Personal Data Protection Agency (AZOP). To exercise your rights, contact us by e-mail."
+        ]
+      }
+    ]
+  },
+  "notfound": {
+    "title": "Page not found",
+    "text": "The page you are looking for does not exist or has been moved.",
+    "home": "Go to the home page"
   }
 }

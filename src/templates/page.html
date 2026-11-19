@@ -13,8 +13,12 @@
   <meta property="og:title" content="{{t.meta.title}}">
   <meta property="og:description" content="{{t.meta.description}}">
   <meta property="og:url" content="{{c.site_url}}/{{lang}}/">
-  <meta property="og:image" content="{{c.site_url}}/{{img.hero.large}}">
+  <meta property="og:image" content="{{c.site_url}}/{{img.og.url}}">
+  <meta property="og:image:width" content="{{img.og.w}}">
+  <meta property="og:image:height" content="{{img.og.h}}">
+  <meta property="og:image:alt" content="{{t.hero.image_alt}}">
   <meta property="og:locale" content="{{t.meta.locale}}">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#2f5a46">
   <link rel="icon" href="{{root}}assets/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="{{root}}assets/fonts/jost-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -34,7 +38,7 @@
     <nav class="site-nav" id="site-nav" data-nav>
       <a href="#house">{{t.nav.house}}</a>
       <a href="#rooms">{{t.nav.rooms}}</a>
-      <a href="#amenities">{{t.nav.amenities}}</a>
+      <a href="#prices">{{t.nav.prices}}</a>
       <a href="#location">{{t.nav.location}}</a>
       <a href="#contact">{{t.nav.contact}}</a>
       <div class="lang-switch" role="group" aria-label="{{t.nav.language}}">{{html.lang_switcher}}</div>
@@ -102,6 +106,54 @@
     </div>
   </section>
 
+  <section class="section reviews" id="reviews">
+    <div class="container">
+      <header class="section-head reveal">
+        <p class="kicker">{{t.reviews.kicker}}</p>
+        <h2>{{t.reviews.title}}</h2>
+      </header>
+      <div class="rv reveal">{{html.reviews}}</div>
+    </div>
+  </section>
+
+  <section class="section prices" id="prices">
+    <div class="container">
+      <header class="section-head reveal">
+        <p class="kicker">{{t.prices.kicker}}</p>
+        <h2>{{t.prices.title}}</h2>
+        <p>{{t.prices.intro}}</p>
+      </header>
+      <div class="prices-grid">
+        <div class="calendar reveal" data-calendar>
+          <div class="cal-head">
+            <h3>{{icon.calendar}} {{t.calendar.title}}</h3>
+            <div class="cal-nav">
+              <button type="button" class="cal-arrow" data-cal-prev aria-label="{{t.calendar.prev}}">{{icon.chevron_left}}</button>
+              <button type="button" class="cal-arrow" data-cal-next aria-label="{{t.calendar.next}}">{{icon.chevron_right}}</button>
+            </div>
+          </div>
+          <div class="cal-months" data-cal-months></div>
+          <ul class="cal-legend">
+            <li><span class="lg lg-free"></span>{{t.calendar.free}}</li>
+            <li><span class="lg lg-booked"></span>{{t.calendar.booked}}</li>
+            <li><span class="lg lg-selected"></span>{{t.calendar.selected}}</li>
+          </ul>
+          <div class="cal-status" aria-live="polite">
+            <p data-cal-message>{{t.calendar.hint}}</p>
+            <div class="cal-actions" data-cal-actions hidden>
+              <a class="btn btn-primary" href="#contact" data-cal-cta>{{t.calendar.cta}}</a>
+              <button type="button" class="cal-clear" data-cal-clear>{{t.calendar.clear}}</button>
+            </div>
+          </div>
+          <p class="cal-note">{{t.calendar.note}} <span data-cal-updated></span></p>
+          <script type="application/json" data-cal-data>{{html.calendar_data}}</script>
+        </div>
+        <ul class="price-notes reveal">{{html.price_notes}}</ul>
+      </div>
+    </div>
+  </section>
+
+
   <section class="section location" id="location">
     <div class="container location-grid">
       <div class="location-text reveal">
@@ -120,16 +172,29 @@
     </div>
   </section>
 
+  <section class="section explore" id="explore">
+    <div class="container">
+      <header class="section-head reveal">
+        <p class="kicker">{{t.explore.kicker}}</p>
+        <h2>{{t.explore.title}}</h2>
+        <p>{{t.explore.intro}}</p>
+      </header>
+      <ul class="places">{{html.explore}}</ul>
+    </div>
+  </section>
+
+
   <section class="section contact" id="contact">
     <div class="container contact-grid">
       <div class="contact-info reveal">
         <p class="kicker">{{t.contact.kicker}}</p>
         <h2>{{t.contact.title}}</h2>
         <p>{{t.contact.intro}}</p>
+        <p>{{t.contact.how_to_book}}</p>
         <div class="contact-cards">{{html.contact_cards}}</div>
       </div>
 
-      <form class="inquiry reveal" data-inquiry data-obf-email="{{obf.email}}" data-subject="{{t.contact.form.subject}}">
+      <form class="inquiry reveal" data-inquiry data-obf-email="{{obf.email}}" data-obf-wa="{{obf.whatsapp}}" data-subject="{{t.contact.form.subject}}" data-to="{{t.contact.form.to}}">
         <h3>{{t.contact.form.title}}</h3>
         <label class="field">
           <span>{{t.contact.form.name}}</span>
@@ -158,6 +223,14 @@
         </label>
         <button class="btn btn-primary" type="submit">{{icon.mail}} {{t.contact.form.submit}}</button>
         <p class="form-note">{{t.contact.form.note}}</p>
+        <div class="inquiry-alt" data-inquiry-alt hidden>
+          <p>{{t.contact.form.fallback}}</p>
+          <div class="inquiry-alt-actions">
+            <a class="alt-btn" href="#contact" target="_blank" rel="noopener" data-alt-whatsapp>{{icon.chat}} {{t.contact.form.via_whatsapp}}</a>
+            <a class="alt-btn" href="#contact" target="_blank" rel="noopener" data-alt-gmail>{{icon.mail}} {{t.contact.form.via_gmail}}</a>
+            <button class="alt-btn" type="button" data-alt-copy data-copied="{{t.contact.form.copied}}">{{icon.copy}} <span>{{t.contact.form.copy}}</span></button>
+          </div>
+        </div>
       </form>
     </div>
   </section>
@@ -178,8 +251,11 @@
   </div>
   <div class="container footer-bottom">
     <p>© {{c.year}} Holiday House Antica. {{t.footer.rights}}</p>
+    <a href="privacy/">{{t.footer.privacy}}</a>
   </div>
 </footer>
+
+<div class="fab" role="group" aria-label="{{t.fab.label}}" data-fab>{{html.fab}}</div>
 
 <div class="lightbox" role="dialog" aria-modal="true" aria-label="{{t.rooms.title}}" hidden data-lightbox>
   <button class="lb-btn lb-close" type="button" aria-label="{{t.lightbox.close}}" data-lb-close>{{icon.close}}</button>

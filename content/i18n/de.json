@@ -3,7 +3,7 @@
   "meta": {
     "locale": "de_DE",
     "title": "Holiday House Antica – Ferienhaus in Vidovići, Insel Cres, Kroatien",
-    "description": "Renoviertes Ferienhaus aus Stein für 6 Personen in Vidovići auf der Insel Cres: 2 Apartments, 3 Schlafzimmer, Balkon mit Meerblick, Hof und Terrasse. Ruhe, Natur und Blick auf die Kvarner Bucht."
+    "description": "Renoviertes Ferienhaus aus Stein für 6 Personen in Vidovići auf der Insel Cres: 3 Schlafzimmer, 2 Küchen, 2 Badezimmer, Balkon mit Meerblick, Hof und Terrasse. Ruhe, Natur und Blick auf die Kvarner Bucht."
   },
   "nav": {
     "house": "Das Haus",
@@ -12,7 +12,8 @@
     "location": "Lage",
     "contact": "Kontakt",
     "menu": "Menü",
-    "language": "Sprache"
+    "language": "Sprache",
+    "prices": "Preise"
   },
   "hero": {
     "eyebrow": "Vidovići · Insel Cres · Kroatien",
@@ -22,19 +23,37 @@
     "image_alt": "Blick von Vidovići auf die Bucht und die Inseln des Lošinj-Archipels"
   },
   "facts": [
-    { "value": "6", "label": "Gäste" },
-    { "value": "3", "label": "Schlafzimmer" },
-    { "value": "2", "label": "Apartments" },
-    { "value": "2", "label": "Badezimmer" },
-    { "value": "145 m²", "label": "Wohnfläche" },
-    { "value": "280 m", "label": "über dem Meer" }
+    {
+      "value": "6",
+      "label": "Gäste"
+    },
+    {
+      "value": "3",
+      "label": "Schlafzimmer"
+    },
+    {
+      "value": "2",
+      "label": "Küchen"
+    },
+    {
+      "value": "2",
+      "label": "Badezimmer"
+    },
+    {
+      "value": "145 m²",
+      "label": "Wohnfläche"
+    },
+    {
+      "value": "280 m",
+      "label": "über dem Meer"
+    }
   ],
   "about": {
     "kicker": "Das Haus",
     "title": "Eines der ältesten Häuser in Vidovići – liebevoll restauriert",
     "paragraphs": [
       "Das Holiday House Antica ist eines der ältesten Häuser im Dorf Vidovići auf der Insel Cres. Es wurde 2021 renoviert und bietet auf Erdgeschoss und drei Etagen rund 145 m² – mit Steinmauern, Holzbalken und grünen Fensterläden, die den Charme der alten Inselarchitektur bewahren.",
-      "Das Haus besteht aus zwei Apartments mit separaten Eingängen – ideal für zwei Familien oder Freunde, die gemeinsam reisen. Insgesamt bietet es 3 Schlafzimmer für 6 Personen, zwei voll ausgestattete Küchen, zwei Essbereiche, zwei Wohnzimmer und zwei Badezimmer.",
+      "Das Haus wird als Ganzes vermietet und hat zwei Wohnbereiche, die innen miteinander verbunden sind – man kann also frei von einem in den anderen wechseln. Jeder hat einen eigenen Eingang, eine eigene Küche, einen Essbereich, ein Wohnzimmer und ein Bad – ideal für eine große Familie oder zwei Familien, die gemeinsam reisen. Insgesamt bietet das Haus 3 Schlafzimmer für 6 Personen.",
       "Vor dem Eingang befinden sich ein Hof und eine kleine Terrasse mit Sitzplätzen für sechs Personen, und vom Balkon im dritten Stock genießen Sie einen wunderschönen Blick auf die Kvarner Bucht und die Adria."
     ],
     "image_alt": "Holiday House Antica – das weiße Steinhaus mit grünen Fensterläden"
@@ -59,15 +78,81 @@
     "kicker": "Ausstattung",
     "title": "Alles für einen entspannten Urlaub",
     "items": [
-      { "icon": "wifi", "text": "Kostenloses WLAN" },
-      { "icon": "tv", "text": "2 Fernseher" },
-      { "icon": "climate", "text": "Wärmepumpe – Kühlung & Heizung" },
-      { "icon": "kitchen", "text": "2 voll ausgestattete Küchen" },
-      { "icon": "door", "text": "2 Apartments mit separaten Eingängen" },
-      { "icon": "sun", "text": "Hof & Terrasse mit Sitzplätzen für 6" },
-      { "icon": "waves", "text": "Balkon mit Meerblick" },
-      { "icon": "parking", "text": "Kostenlose öffentliche Parkplätze in 100 m" }
+      {
+        "icon": "wifi",
+        "text": "Kostenloses WLAN"
+      },
+      {
+        "icon": "tv",
+        "text": "2 Fernseher"
+      },
+      {
+        "icon": "climate",
+        "text": "Wärmepumpe – Kühlung & Heizung"
+      },
+      {
+        "icon": "kitchen",
+        "text": "2 voll ausgestattete Küchen"
+      },
+      {
+        "icon": "door",
+        "text": "Zwei innen verbundene Wohnbereiche, jeder mit eigenem Eingang"
+      },
+      {
+        "icon": "sun",
+        "text": "Hof & Terrasse mit Sitzplätzen für 6"
+      },
+      {
+        "icon": "waves",
+        "text": "Balkon mit Meerblick"
+      },
+      {
+        "icon": "parking",
+        "text": "Kostenlose öffentliche Parkplätze in 100 m"
+      }
     ]
+  },
+  "reviews": {
+    "kicker": "Gästebewertungen",
+    "title": "Was unsere Gäste sagen",
+    "score_word": "Außergewöhnlich",
+    "based_on": "Gästebewertung auf Booking.com · Bewertungen: {count}",
+    "categories": {
+      "staff": "Gastgeber",
+      "facilities": "Ausstattung",
+      "cleanliness": "Sauberkeit",
+      "comfort": "Komfort",
+      "value": "Preis-Leistungs-Verhältnis"
+    },
+    "read_more": "Bewertungen auf Booking.com lesen",
+    "quotes": []
+  },
+  "prices": {
+    "kicker": "Preise",
+    "title": "Preise & freie Termine",
+    "intro": "Der Preis unter jedem Datum im Kalender gilt pro Nacht für das ganze Haus (bis zu 6 Personen), in Euro.",
+    "price_pattern": "{p} €",
+    "notes": [
+      "Termine ohne Preis sind nicht im Angebot – fragen Sie uns gerne an.",
+      "Für längere Aufenthalte fragen Sie gerne nach einem Sonderangebot."
+    ]
+  },
+  "calendar": {
+    "title": "Belegungskalender",
+    "free": "Frei",
+    "booked": "Belegt",
+    "selected": "Ihre Auswahl",
+    "prev": "Vorheriger Monat",
+    "next": "Nächster Monat",
+    "hint": "Klicken Sie auf Ihr Anreisedatum und dann auf Ihr Abreisedatum.",
+    "pick_departure": "Wählen Sie jetzt Ihr Abreisedatum.",
+    "selection": "{from} – {to} · Nächte: {n}",
+    "total": "gesamt {price}",
+    "min_stay": "Der Mindestaufenthalt in diesem Zeitraum beträgt {n} Nächte.",
+    "cta": "Anfrage für diese Daten senden",
+    "clear": "Zurücksetzen",
+    "note": "Der Kalender dient zur Orientierung – die Verfügbarkeit bestätigen wir in unserer Antwort auf Ihre Anfrage.",
+    "updated": "Aktualisiert: {date}"
   },
   "location": {
     "kicker": "Lage",
@@ -77,18 +162,82 @@
       "Die Insel Cres erreichen Sie mit der Fähre von Istrien (Brestova – Porozina) oder von der Insel Krk (Valbiska – Merag); die Überfahrt dauert etwa 25 Minuten."
     ],
     "distances": [
-      { "icon": "waves", "value": "2,5 km", "label": "zum ersten Strand in Martinšćica" },
-      { "icon": "kitchen", "value": "~2 km", "label": "Restaurants & Markt in Martinšćica" },
-      { "icon": "parking", "value": "100 m", "label": "kostenloser öffentlicher Parkplatz" },
-      { "icon": "ship", "value": "25 Min.", "label": "Fährüberfahrt nach Cres" }
+      {
+        "icon": "waves",
+        "value": "2,5 km",
+        "label": "zum ersten Strand in Martinšćica"
+      },
+      {
+        "icon": "kitchen",
+        "value": "~2 km",
+        "label": "Restaurants & Markt in Martinšćica"
+      },
+      {
+        "icon": "parking",
+        "value": "100 m",
+        "label": "kostenloser öffentlicher Parkplatz"
+      },
+      {
+        "icon": "ship",
+        "value": "25 Min.",
+        "label": "Fährüberfahrt zur Insel Cres"
+      }
     ],
     "map_title": "Karte – Vidovići, Insel Cres",
     "open_map": "In Google Maps öffnen"
+  },
+  "explore": {
+    "kicker": "Umgebung",
+    "title": "Sehenswertes auf Cres und Lošinj",
+    "intro": "Vidovići ist ein idealer Ausgangspunkt für Ausflüge über die ganze Inselgruppe. Die Entfernungen sind ungefähre Angaben mit dem Auto.",
+    "items": [
+      {
+        "name": "Martinšćica",
+        "distance": "~2 km",
+        "text": "Der nächste Ort am Meer: Kiesstrände, Restaurants, ein Geschäft und ein kleiner Hafen."
+      },
+      {
+        "name": "Vransko-See",
+        "distance": "~10 km",
+        "text": "Ein einzigartiger Süßwassersee mitten auf der Insel und Trinkwasserquelle für Cres und Lošinj – mit schönem Blick von der Straße."
+      },
+      {
+        "name": "Lubenice",
+        "distance": "~15 km",
+        "text": "Ein Steindorf auf einer Klippe 378 m über dem Meer – einer der schönsten Orte der Adria. Darunter liegt der versteckte Strand Sveti Ivan."
+      },
+      {
+        "name": "Osor",
+        "distance": "~20 km",
+        "text": "Ein uraltes Städtchen dort, wo sich Cres und Lošinj fast berühren, mit Drehbrücke und Skulpturen unter freiem Himmel."
+      },
+      {
+        "name": "Valun",
+        "distance": "~25 km",
+        "text": "Ein Fischerdorf mit schönen Stränden und der Tafel von Valun, einer der ältesten glagolitischen Inschriften."
+      },
+      {
+        "name": "Stadt Cres",
+        "distance": "~30 km",
+        "text": "Venezianische Altstadt mit engen Gassen, kleinem Hafen und Loggia – ideal für einen Bummel und einen Kaffee am Meer."
+      },
+      {
+        "name": "Mali Lošinj",
+        "distance": "~40 km",
+        "text": "Die größte Stadt der Inselgruppe: Uferpromenade, Veli Lošinj, die Bucht Čikat und Bootsausflüge nach Susak und Ilovik."
+      },
+      {
+        "name": "Beli & Tramuntana",
+        "distance": "~55 km",
+        "text": "Ein Dorf im Norden der Insel, umgeben vom uralten Tramuntana-Wald und bekannt für seine Gänsegeier."
+      }
+    ]
   },
   "contact": {
     "kicker": "Kontakt",
     "title": "Planen Sie Ihren Aufenthalt",
     "intro": "Rufen Sie uns an oder schreiben Sie uns – wir beantworten gerne alle Fragen zu Verfügbarkeit und Preisen.",
+    "how_to_book": "Senden Sie uns eine Anfrage – wir bestätigen Verfügbarkeit und Preis.",
     "call": "Rufen Sie uns an",
     "email": "E-Mail senden",
     "whatsapp": "WhatsApp",
@@ -102,16 +251,80 @@
       "message": "Nachricht",
       "submit": "Anfrage senden",
       "note": "Die Schaltfläche öffnet Ihr E-Mail-Programm mit einer vorausgefüllten Nachricht.",
-      "subject": "Anfrage – Holiday House Antica"
+      "subject": "Anfrage – Holiday House Antica",
+      "fallback": "Falls sich Ihr E-Mail-Programm nicht geöffnet hat, senden Sie die Anfrage auf einem dieser Wege:",
+      "via_whatsapp": "Über WhatsApp senden",
+      "via_gmail": "In Gmail öffnen",
+      "copy": "Nachricht kopieren",
+      "copied": "Kopiert!",
+      "to": "An"
     }
+  },
+  "fab": {
+    "label": "Schnellkontakt",
+    "call": "Anrufen",
+    "whatsapp": "WhatsApp"
   },
   "footer": {
     "address": "Vidovići, Insel Cres, Kroatien",
-    "rights": "Alle Rechte vorbehalten."
+    "rights": "Alle Rechte vorbehalten.",
+    "privacy": "Datenschutz"
   },
   "lightbox": {
     "close": "Schließen",
     "prev": "Vorheriges Foto",
     "next": "Nächstes Foto"
+  },
+  "privacy": {
+    "title": "Datenschutzerklärung",
+    "description": "Wie Holiday House Antica mit Ihren personenbezogenen Daten umgeht.",
+    "back": "Zurück zur Startseite",
+    "contact": "Fragen zum Datenschutz senden Sie bitte an:",
+    "sections": [
+      {
+        "h": "Wer wir sind",
+        "p": [
+          "Diese Website stellt das Ferienhaus Holiday House Antica in Vidovići auf der Insel Cres vor. Bei Fragen zum Datenschutz erreichen Sie uns per E-Mail (die Adresse steht unten auf dieser Seite)."
+        ]
+      },
+      {
+        "h": "Welche Daten wir erheben",
+        "p": [
+          "Die Website hat keine Benutzerkonten, keine Analysedienste und keine Werbe-Cookies und speichert keine personenbezogenen Daten auf einem Server.",
+          "Das Anfrageformular sendet nichts über die Website – es öffnet nur Ihr E-Mail-Programm mit einer vorbereiteten Nachricht. Ihre Daten erhalten wir erst, wenn Sie uns selbst eine E-Mail oder WhatsApp-Nachricht senden oder uns anrufen."
+        ]
+      },
+      {
+        "h": "Wie wir Ihre Daten verwenden",
+        "p": [
+          "Die Angaben aus Ihrer Anfrage (Name, Kontakt, Reisedaten, Personenzahl und Nachricht) verwenden wir ausschließlich, um Ihre Anfrage zu beantworten und Ihren Aufenthalt zu organisieren. Wir verkaufen sie nicht und geben sie nicht an Dritte weiter, außer wenn das Gesetz es verlangt (z. B. die Pflichtanmeldung der Gäste im kroatischen System eVisitor)."
+        ]
+      },
+      {
+        "h": "Dienste von Drittanbietern",
+        "p": [
+          "Die Website wird über GitHub Pages (GitHub Inc.) bereitgestellt, das aus Sicherheits- und Betriebsgründen IP-Adressen der Besucher protokollieren kann.",
+          "Die Lagekarte wird von Google Maps geladen. Google kann dabei Ihre Daten verarbeiten und Cookies gemäß seiner eigenen Datenschutzerklärung setzen.",
+          "Die Schriftarten werden direkt von dieser Website geladen, ohne externe Dienste."
+        ]
+      },
+      {
+        "h": "Lokale Speicherung im Browser",
+        "p": [
+          "Die Website speichert in Ihrem Browser nur die gewählte Sprache (localStorage), damit sie beim nächsten Besuch in derselben Sprache öffnet. Diese Angabe verlässt Ihr Gerät nicht."
+        ]
+      },
+      {
+        "h": "Ihre Rechte",
+        "p": [
+          "Nach der Datenschutz-Grundverordnung (DSGVO) haben Sie das Recht auf Auskunft, Berichtigung und Löschung Ihrer Daten sowie das Recht auf Beschwerde bei der kroatischen Datenschutzbehörde (AZOP). Um Ihre Rechte auszuüben, schreiben Sie uns eine E-Mail."
+        ]
+      }
+    ]
+  },
+  "notfound": {
+    "title": "Seite nicht gefunden",
+    "text": "Die gesuchte Seite existiert nicht oder wurde verschoben.",
+    "home": "Zur Startseite"
   }
 }

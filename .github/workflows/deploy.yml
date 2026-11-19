@@ -5,6 +5,8 @@
 #     Secrets:   SITE_PHONE     e.g. +385 91 123 4567
 #                SITE_EMAIL     e.g. info@your-domain.com
 #                SITE_WHATSAPP  digits only, e.g. 385911234567 (optional)
+#                SITE_ICAL_URLS calendar export links (Booking, Airbnb ...), separated
+#                               by spaces – fills the availability calendar (optional)
 #     Variables: SITE_URL       e.g. https://www.your-domain.com (optional)
 # Missing values fall back to the placeholders in content/config.json.
 
@@ -14,6 +16,9 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  # Rebuild every morning so the availability calendar picks up new bookings.
+  schedule:
+    - cron: "15 4 * * *"
 
 permissions:
   contents: read
@@ -43,6 +48,7 @@ jobs:
           SITE_PHONE: ${{ secrets.SITE_PHONE }}
           SITE_EMAIL: ${{ secrets.SITE_EMAIL }}
           SITE_WHATSAPP: ${{ secrets.SITE_WHATSAPP }}
+          SITE_ICAL_URLS: ${{ secrets.SITE_ICAL_URLS }}
           SITE_URL: ${{ vars.SITE_URL }}
 
       - uses: actions/configure-pages@v5

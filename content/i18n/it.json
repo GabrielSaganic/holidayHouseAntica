@@ -3,7 +3,7 @@
   "meta": {
     "locale": "it_IT",
     "title": "Holiday House Antica – casa vacanze a Vidovići, isola di Cres (Cherso), Croazia",
-    "description": "Casa vacanze in pietra ristrutturata per 6 persone a Vidovići, sull'isola di Cres: 2 appartamenti, 3 camere da letto, balcone vista mare, cortile e terrazza. Pace, natura e vista sul Quarnero."
+    "description": "Casa vacanze in pietra ristrutturata per 6 persone a Vidovići, sull'isola di Cres: 3 camere da letto, 2 cucine, 2 bagni, balcone vista mare, cortile e terrazza. Pace, natura e vista sul Quarnero."
   },
   "nav": {
     "house": "La casa",
@@ -12,7 +12,8 @@
     "location": "Posizione",
     "contact": "Contatti",
     "menu": "Menu",
-    "language": "Lingua"
+    "language": "Lingua",
+    "prices": "Prezzi"
   },
   "hero": {
     "eyebrow": "Vidovići · Isola di Cres · Croazia",
@@ -22,19 +23,37 @@
     "image_alt": "Vista da Vidovići sulla baia e sulle isole dell'arcipelago di Lussino"
   },
   "facts": [
-    { "value": "6", "label": "ospiti" },
-    { "value": "3", "label": "camere da letto" },
-    { "value": "2", "label": "appartamenti" },
-    { "value": "2", "label": "bagni" },
-    { "value": "145 m²", "label": "di superficie" },
-    { "value": "280 m", "label": "sul livello del mare" }
+    {
+      "value": "6",
+      "label": "ospiti"
+    },
+    {
+      "value": "3",
+      "label": "camere da letto"
+    },
+    {
+      "value": "2",
+      "label": "cucine"
+    },
+    {
+      "value": "2",
+      "label": "bagni"
+    },
+    {
+      "value": "145 m²",
+      "label": "di superficie"
+    },
+    {
+      "value": "280 m",
+      "label": "sul livello del mare"
+    }
   ],
   "about": {
     "kicker": "La casa",
     "title": "Una delle case più antiche di Vidovići, restaurata con cura",
     "paragraphs": [
       "Holiday House Antica è una delle case più antiche del paese di Vidovići, sull'isola di Cres (Cherso). Ristrutturata nel 2021, offre circa 145 m² distribuiti su piano terra e tre piani, con muri in pietra, travi in legno e persiane verdi che conservano lo spirito dell'antica architettura isolana.",
-      "La casa è composta da due appartamenti con ingressi separati – ideale per due famiglie o amici che viaggiano insieme. In totale offre 3 camere da letto per 6 persone, due cucine completamente attrezzate, due zone pranzo, due soggiorni e due bagni.",
+      "La casa si affitta per intero e ha due zone abitative collegate all'interno, così si passa liberamente dall'una all'altra. Ognuna ha il proprio ingresso, cucina, zona pranzo, soggiorno e bagno – ideale per una famiglia numerosa o per due famiglie che viaggiano insieme. In totale la casa offre 3 camere da letto per 6 persone.",
       "Davanti all'ingresso si trovano un cortile e una piccola terrazza con posti a sedere per sei persone, mentre dal balcone al terzo piano si gode una splendida vista sul Quarnero e sul mare Adriatico."
     ],
     "image_alt": "Holiday House Antica – la casa bianca in pietra con le persiane verdi"
@@ -59,15 +78,81 @@
     "kicker": "Servizi",
     "title": "Tutto il necessario per una vacanza rilassante",
     "items": [
-      { "icon": "wifi", "text": "Wi-Fi gratuito" },
-      { "icon": "tv", "text": "2 televisori" },
-      { "icon": "climate", "text": "Pompa di calore – raffrescamento e riscaldamento" },
-      { "icon": "kitchen", "text": "2 cucine completamente attrezzate" },
-      { "icon": "door", "text": "2 appartamenti con ingressi separati" },
-      { "icon": "sun", "text": "Cortile e terrazza con posti a sedere per 6" },
-      { "icon": "waves", "text": "Balcone con vista mare" },
-      { "icon": "parking", "text": "Parcheggio pubblico gratuito a 100 m" }
+      {
+        "icon": "wifi",
+        "text": "Wi-Fi gratuito"
+      },
+      {
+        "icon": "tv",
+        "text": "2 televisori"
+      },
+      {
+        "icon": "climate",
+        "text": "Pompa di calore – raffrescamento e riscaldamento"
+      },
+      {
+        "icon": "kitchen",
+        "text": "2 cucine completamente attrezzate"
+      },
+      {
+        "icon": "door",
+        "text": "Due zone abitative collegate all'interno, ciascuna con il proprio ingresso"
+      },
+      {
+        "icon": "sun",
+        "text": "Cortile e terrazza con posti a sedere per 6"
+      },
+      {
+        "icon": "waves",
+        "text": "Balcone con vista mare"
+      },
+      {
+        "icon": "parking",
+        "text": "Parcheggio pubblico gratuito a 100 m"
+      }
     ]
+  },
+  "reviews": {
+    "kicker": "Recensioni",
+    "title": "Cosa dicono i nostri ospiti",
+    "score_word": "Eccezionale",
+    "based_on": "Valutazione degli ospiti su Booking.com · recensioni: {count}",
+    "categories": {
+      "staff": "Padroni di casa",
+      "facilities": "Servizi",
+      "cleanliness": "Pulizia",
+      "comfort": "Comfort",
+      "value": "Rapporto qualità-prezzo"
+    },
+    "read_more": "Leggi le recensioni su Booking.com",
+    "quotes": []
+  },
+  "prices": {
+    "kicker": "Prezzi",
+    "title": "Prezzi e disponibilità",
+    "intro": "Il prezzo sotto ogni data del calendario è a notte per l'intera casa (fino a 6 persone), in euro.",
+    "price_pattern": "{p} €",
+    "notes": [
+      "Le date senza prezzo non sono prenotabili qui – inviateci una richiesta.",
+      "Per soggiorni più lunghi chiedeteci un'offerta speciale."
+    ]
+  },
+  "calendar": {
+    "title": "Calendario disponibilità",
+    "free": "Libero",
+    "booked": "Occupato",
+    "selected": "La tua scelta",
+    "prev": "Mese precedente",
+    "next": "Mese successivo",
+    "hint": "Clicca sulla data di arrivo e poi sulla data di partenza.",
+    "pick_departure": "Ora scegli la data di partenza.",
+    "selection": "{from} – {to} · notti: {n}",
+    "total": "totale {price}",
+    "min_stay": "Il soggiorno minimo in questo periodo è di {n} notti.",
+    "cta": "Invia una richiesta per queste date",
+    "clear": "Annulla",
+    "note": "Il calendario è indicativo – confermiamo la disponibilità nella risposta alla tua richiesta.",
+    "updated": "Aggiornato: {date}"
   },
   "location": {
     "kicker": "Posizione",
@@ -77,18 +162,82 @@
       "L'isola di Cres si raggiunge in traghetto dall'Istria (Brestova – Porozina) o dall'isola di Krk (Valbiska – Merag); la traversata dura circa 25 minuti."
     ],
     "distances": [
-      { "icon": "waves", "value": "2,5 km", "label": "dalla prima spiaggia a Martinšćica" },
-      { "icon": "kitchen", "value": "~2 km", "label": "ristoranti e market a Martinšćica" },
-      { "icon": "parking", "value": "100 m", "label": "parcheggio pubblico gratuito" },
-      { "icon": "ship", "value": "25 min", "label": "traversata in traghetto per Cres" }
+      {
+        "icon": "waves",
+        "value": "2,5 km",
+        "label": "dalla prima spiaggia a Martinšćica"
+      },
+      {
+        "icon": "kitchen",
+        "value": "~2 km",
+        "label": "ristoranti e market a Martinšćica"
+      },
+      {
+        "icon": "parking",
+        "value": "100 m",
+        "label": "parcheggio pubblico gratuito"
+      },
+      {
+        "icon": "ship",
+        "value": "25 min",
+        "label": "traversata in traghetto per l'isola di Cres"
+      }
     ],
     "map_title": "Mappa – Vidovići, isola di Cres",
     "open_map": "Apri in Google Maps"
+  },
+  "explore": {
+    "kicker": "Dintorni",
+    "title": "Cosa vedere a Cres e Lussino",
+    "intro": "Vidovići è un ottimo punto di partenza per esplorare tutto l'arcipelago. Le distanze sono indicative, in auto.",
+    "items": [
+      {
+        "name": "Martinšćica",
+        "distance": "~2 km",
+        "text": "Il paese sul mare più vicino: spiagge di ciottoli, ristoranti, un negozio e un piccolo porticciolo."
+      },
+      {
+        "name": "Lago di Vrana",
+        "distance": "~10 km",
+        "text": "Un lago d'acqua dolce unico nel cuore dell'isola e fonte di acqua potabile per Cres e Lussino, con una bella vista dalla strada."
+      },
+      {
+        "name": "Lubenice",
+        "distance": "~15 km",
+        "text": "Un borgo di pietra su una rupe a 378 m sul mare, uno dei luoghi più belli dell'Adriatico. Sotto si nasconde la spiaggia di Sveti Ivan."
+      },
+      {
+        "name": "Osor (Ossero)",
+        "distance": "~20 km",
+        "text": "Un'antica cittadina dove Cres e Lussino quasi si toccano, con un ponte girevole e sculture all'aperto."
+      },
+      {
+        "name": "Valun",
+        "distance": "~25 km",
+        "text": "Un villaggio di pescatori con belle spiagge e la Lapide di Valun, una delle più antiche iscrizioni glagolitiche."
+      },
+      {
+        "name": "Città di Cres",
+        "distance": "~30 km",
+        "text": "Centro storico veneziano con vicoli stretti, un porticciolo e la piazza con la loggia – ideale per una passeggiata e un caffè sul mare."
+      },
+      {
+        "name": "Mali Lošinj",
+        "distance": "~40 km",
+        "text": "La città più grande dell'arcipelago: lungomare, Veli Lošinj, la baia di Čikat e gite in barca a Susak e Ilovik."
+      },
+      {
+        "name": "Beli e Tramuntana",
+        "distance": "~55 km",
+        "text": "Un villaggio nel nord dell'isola, circondato dall'antica foresta della Tramuntana e noto per i grifoni."
+      }
+    ]
   },
   "contact": {
     "kicker": "Contatti",
     "title": "Pianifica il tuo soggiorno",
     "intro": "Chiamaci o scrivici – saremo felici di rispondere a ogni domanda su disponibilità e prezzi.",
+    "how_to_book": "Inviateci una richiesta: confermeremo disponibilità e prezzo.",
     "call": "Chiamaci",
     "email": "Invia un'e-mail",
     "whatsapp": "WhatsApp",
@@ -102,16 +251,80 @@
       "message": "Messaggio",
       "submit": "Invia richiesta",
       "note": "Il pulsante apre la tua app di posta con un messaggio già compilato.",
-      "subject": "Richiesta – Holiday House Antica"
+      "subject": "Richiesta – Holiday House Antica",
+      "fallback": "Se la tua app di posta non si è aperta, invia la richiesta in uno di questi modi:",
+      "via_whatsapp": "Invia con WhatsApp",
+      "via_gmail": "Apri in Gmail",
+      "copy": "Copia il messaggio",
+      "copied": "Copiato!",
+      "to": "A"
     }
+  },
+  "fab": {
+    "label": "Contatto rapido",
+    "call": "Chiama",
+    "whatsapp": "WhatsApp"
   },
   "footer": {
     "address": "Vidovići, isola di Cres, Croazia",
-    "rights": "Tutti i diritti riservati."
+    "rights": "Tutti i diritti riservati.",
+    "privacy": "Privacy"
   },
   "lightbox": {
     "close": "Chiudi",
     "prev": "Foto precedente",
     "next": "Foto successiva"
+  },
+  "privacy": {
+    "title": "Informativa sulla privacy",
+    "description": "Come Holiday House Antica tratta i tuoi dati personali.",
+    "back": "Torna alla pagina iniziale",
+    "contact": "Per domande sulla privacy scrivi a:",
+    "sections": [
+      {
+        "h": "Chi siamo",
+        "p": [
+          "Questo sito presenta la casa vacanze Holiday House Antica a Vidovići, sull'isola di Cres. Per qualsiasi domanda sulla privacy contattaci via e-mail (l'indirizzo è in fondo a questa pagina)."
+        ]
+      },
+      {
+        "h": "Quali dati raccogliamo",
+        "p": [
+          "Il sito non ha account utente, strumenti di analisi né cookie pubblicitari e non memorizza i tuoi dati personali su alcun server.",
+          "Il modulo di richiesta non invia nulla tramite il sito: apre soltanto la tua app di posta con un messaggio già compilato. Riceviamo i tuoi dati solo quando ci invii tu stesso un'e-mail o un messaggio WhatsApp, oppure quando ci chiami."
+        ]
+      },
+      {
+        "h": "Come usiamo i tuoi dati",
+        "p": [
+          "Usiamo i dati della tua richiesta (nome, contatto, date, numero di ospiti e messaggio) esclusivamente per risponderti e organizzare il tuo soggiorno. Non li vendiamo né li condividiamo con terzi, salvo quando previsto dalla legge (ad es. la registrazione obbligatoria degli ospiti nel sistema croato eVisitor)."
+        ]
+      },
+      {
+        "h": "Servizi di terze parti",
+        "p": [
+          "Il sito è ospitato su GitHub Pages (GitHub Inc.), che può registrare gli indirizzi IP dei visitatori per motivi di sicurezza e di funzionamento.",
+          "La mappa viene caricata da Google Maps. Google può trattare i tuoi dati e impostare cookie secondo la propria informativa sulla privacy.",
+          "I caratteri tipografici vengono caricati direttamente da questo sito, senza servizi esterni."
+        ]
+      },
+      {
+        "h": "Memorizzazione locale nel browser",
+        "p": [
+          "Il sito memorizza nel tuo browser solo la lingua scelta (localStorage), così da aprirsi nella stessa lingua la volta successiva. Questo dato non lascia il tuo dispositivo."
+        ]
+      },
+      {
+        "h": "I tuoi diritti",
+        "p": [
+          "Ai sensi del Regolamento generale sulla protezione dei dati (GDPR) hai diritto di accesso, rettifica e cancellazione dei tuoi dati, nonché di presentare reclamo all'Autorità croata per la protezione dei dati personali (AZOP). Per esercitare i tuoi diritti scrivici via e-mail."
+        ]
+      }
+    ]
+  },
+  "notfound": {
+    "title": "Pagina non trovata",
+    "text": "La pagina che cerchi non esiste o è stata spostata.",
+    "home": "Vai alla pagina iniziale"
   }
 }

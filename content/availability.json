@@ -1,0 +1,7 @@
+{
+  "_note": "Booked periods shown in the availability calendar. 'from' = arrival day, 'to' = departure day (that day is free again). Bookings from the iCal links in the SITE_ICAL_URLS secret are added automatically. The two entries below are TEST DATA – delete them.",
+  "booked": [
+    { "from": "2027-07-03", "to": "2027-07-10" },
+    { "from": "2027-08-07", "to": "2027-08-21" }
+  ]
+}

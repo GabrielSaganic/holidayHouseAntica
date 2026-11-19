@@ -8,7 +8,33 @@
   "address_locality": "Vidovići",
   "address_region": "Primorje-Gorski Kotar",
   "address_country": "HR",
-  "map_query": "Vidovići, Cres, Croatia",
+  "latitude": 44.8349561,
+  "longitude": 14.3496473,
+  "google_maps_url": "https://maps.google.com/?cid=16257291832403036095",
+
+  "booking_url": "https://www.booking.com/hotel/hr/holiday-home-in-vidovici-insel-cres-43064.html",
+
+  "house_rules": {
+    "checkin_from": "15:00",
+    "checkin_until": "18:00",
+    "checkout_from": "08:00",
+    "checkout_until": "10:00",
+    "quiet_from": "22:00",
+    "quiet_until": "08:00"
+  },
+
+  "reviews": {
+    "score": 9.5,
+    "count": 2,
+    "categories": { "staff": 10, "facilities": 10, "cleanliness": 10, "comfort": 8.8, "value": 8.8 }
+  },
+
+  "_seasons_note": "TEST PRICES – replace with your own. Periods are MM-DD (from, to), price is EUR per night for the whole house.",
+  "seasons": [
+    { "id": "low",  "periods": [["04-01", "05-31"], ["10-01", "10-31"]], "price": 120, "min_nights": 3 },
+    { "id": "mid",  "periods": [["06-01", "06-30"], ["09-01", "09-30"]], "price": 150, "min_nights": 5 },
+    { "id": "high", "periods": [["07-01", "08-31"]],                     "price": 190, "min_nights": 7 }
+  ],
 
   "languages": ["hr", "en", "de", "it"],
   "default_language": "en",

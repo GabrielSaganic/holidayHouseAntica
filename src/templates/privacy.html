@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="{{lang}}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{t.privacy.title}} – Holiday House Antica</title>
+  <meta name="description" content="{{t.privacy.description}}">
+  {{html.robots_meta}}
+  <link rel="canonical" href="{{c.site_url}}/{{lang}}/privacy/">
+  {{html.hreflang}}
+  <meta name="theme-color" content="#2f5a46">
+  <link rel="icon" href="{{root}}assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="{{root}}assets/css/style.css?v={{c.version}}">
+</head>
+<body class="subpage">
+
+<header class="site-header is-scrolled">
+  <div class="container header-inner">
+    <a class="brand" href="../" aria-label="Holiday House Antica">
+      <span class="brand-sub">Holiday House</span>
+      <span class="brand-name">Antica</span>
+    </a>
+    <div class="lang-switch" role="group" aria-label="{{t.nav.language}}">{{html.lang_switcher}}</div>
+  </div>
+</header>
+
+<main class="section legal">
+  <div class="container legal-inner">
+    <a class="back-link" href="../">{{icon.chevron_left}} {{t.privacy.back}}</a>
+    <h1>{{t.privacy.title}}</h1>
+    {{html.sections}}
+    <p class="legal-contact">{{t.privacy.contact}}
+      <a href="#" data-obf-href="{{obf.email_href}}" data-obf-text="{{obf.email}}"></a></p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-bottom">
+    <p>© {{c.year}} Holiday House Antica. {{t.footer.rights}}</p>
+    <p>{{t.footer.address}}</p>
+  </div>
+</footer>
+
+<script src="{{root}}assets/js/main.js?v={{c.version}}" defer></script>
+</body>
+</html>

@@ -26,8 +26,9 @@ import os
 import re
 import shutil
 import sys
+import urllib.request
 from pathlib import Path
-from urllib.parse import quote
+from urllib.parse import quote, urlparse
 
 try:
     from PIL import Image, ImageOps
@@ -62,6 +63,9 @@ ICON_PATHS = {
     "mail": '<rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/>',
     "chat": '<path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/>',
     "pin": '<path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>',
+    "calendar": '<rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/>',
+    "external": '<path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>',
+    "copy": '<rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>',
     "close": '<path d="M18 6 6 18M6 6l12 12"/>',
     "chevron_left": '<path d="m15 18-6-6 6-6"/>',
     "chevron_right": '<path d="m9 18 6-6-6-6"/>',
@@ -113,6 +117,17 @@ def process_image(src: Path, out_dir: Path, produced: set) -> dict:
     return info
 
 
+def make_og_image(src: Path, produced: set) -> dict:
+    """1200×630 crop of the hero photo – the preview shown when the link is shared."""
+    dest = DIST / "img" / "og.jpg"
+    produced.add(dest)
+    if not dest.exists() or dest.stat().st_mtime < src.stat().st_mtime:
+        with Image.open(src) as opened:
+            im = ImageOps.fit(ImageOps.exif_transpose(opened).convert("RGB"), (1200, 630), Image.LANCZOS)
+            im.save(dest, "JPEG", quality=82, optimize=True, progressive=True)
+    return {"url": dest.relative_to(DIST).as_posix(), "w": 1200, "h": 630}
+
+
 def list_photos(folder: Path) -> list:
     if not folder.is_dir():
         return []
@@ -146,21 +161,145 @@ def render(template: str, ctx: dict) -> str:
 
 # --------------------------------------------------------------------------- page blocks
 
-def block_lang_switcher(langs: list, current: str, root: str) -> str:
+def fill(text: str, values: dict) -> str:
+    """Replace {name} placeholders in a translated text (unknown names are left as they are)."""
+    return re.sub(r"\{(\w+)\}", lambda m: str(values.get(m.group(1), m.group(0))), text)
+
+
+def number(value, lang: str) -> str:
+    """9.5 → '9,5' in languages that use a decimal comma."""
+    text = f"{value:g}"
+    return text if lang == "en" else text.replace(".", ",")
+
+
+def block_lang_switcher(langs: list, current: str, root: str, page: str = "") -> str:
     links = []
     for code in langs:
         current_attr = ' aria-current="true"' if code == current else ""
         links.append(
-            f'<a href="{root}{code}/" hreflang="{code}" lang="{code}" data-lang="{code}"{current_attr}>{code.upper()}</a>'
+            f'<a href="{root}{code}/{page}" hreflang="{code}" lang="{code}" data-lang="{code}"{current_attr}>{code.upper()}</a>'
         )
     return "".join(links)
 
 
-def block_hreflang(config: dict) -> str:
+def block_hreflang(config: dict, page: str = "") -> str:
     base = config["site_url"]
-    tags = [f'<link rel="alternate" hreflang="{c}" href="{base}/{c}/">' for c in config["languages"]]
-    tags.append(f'<link rel="alternate" hreflang="x-default" href="{base}/">')
+    tags = [f'<link rel="alternate" hreflang="{c}" href="{base}/{c}/{page}">' for c in config["languages"]]
+    if not page:
+        tags.append(f'<link rel="alternate" hreflang="x-default" href="{base}/">')
     return "\n  ".join(tags)
+
+
+def block_reviews(config: dict, t: dict, lang: str) -> str:
+    r, tr = config["reviews"], t["reviews"]
+    bars = "".join(
+        f'<li><span class="rv-cat">{esc(tr["categories"][key])}</span>'
+        f'<span class="rv-bar" aria-hidden="true"><span style="width:{score * 10:g}%"></span></span>'
+        f'<span class="rv-num">{number(score, lang)}</span></li>'
+        for key, score in r["categories"].items()
+    )
+    quotes = "".join(
+        f'<figure class="rv-quote"><blockquote>“{esc(q["text"])}”</blockquote>'
+        f'<figcaption>{esc(q["author"])}</figcaption></figure>'
+        for q in tr.get("quotes", [])
+    )
+    return (
+        f'<div class="rv-score"><span class="rv-big">{number(r["score"], lang)}</span>'
+        f'<span class="rv-word">{esc(tr["score_word"])}</span>'
+        f'<span class="rv-based">{esc(fill(tr["based_on"], {"count": r["count"]}))}</span>'
+        f'<a class="rv-link" href="{esc(config["booking_url"])}" target="_blank" rel="noopener">'
+        f'{esc(tr["read_more"])} {icon("external")}</a></div>'
+        f'<ul class="rv-cats">{bars}</ul>'
+        + (f'<div class="rv-quotes">{quotes}</div>' if quotes else "")
+    )
+
+
+
+
+def block_explore(t: dict) -> str:
+    return "".join(
+        f'<li class="place reveal"><span class="place-num">{n:02d}</span>'
+        f'<div class="place-head"><h3>{esc(item["name"])}</h3><span class="place-dist">{esc(item["distance"])}</span></div>'
+        f'<p>{esc(item["text"])}</p></li>'
+        for n, item in enumerate(t["explore"]["items"], 1)
+    )
+
+
+
+def block_fab(config: dict, t: dict, obf: dict) -> str:
+    """Floating quick-contact buttons (mainly for phones)."""
+    buttons = [
+        f'<a class="fab-btn fab-call" href="#contact" data-obf-href="{obf["phone_href"]}" '
+        f'aria-label="{esc(t["fab"]["call"])}">{icon("phone")}</a>'
+    ]
+    if config.get("whatsapp"):
+        buttons.insert(0,
+            f'<a class="fab-btn fab-wa" href="#contact" data-obf-href="{obfuscate("https://wa.me/" + config["whatsapp"])}" '
+            f'target="_blank" rel="noopener" '
+            f'aria-label="{esc(t["fab"]["whatsapp"])}">{icon("chat")}</a>'
+        )
+    return "".join(buttons)
+
+
+def block_calendar_data(config: dict, t: dict, lang: str, availability: dict) -> str:
+    data = {
+        "lang": lang,
+        "booked": availability["booked"],
+        "updated": availability["updated"],
+        "seasons": [
+            {"periods": s["periods"], "min": s["min_nights"], "price": s["price"]} for s in config["seasons"]
+        ],
+        "price_pattern": t["prices"]["price_pattern"],
+        "t": t["calendar"],
+    }
+    return json.dumps(data, ensure_ascii=False).replace("</", "<\\/")
+
+
+# --------------------------------------------------------------------------- availability
+
+def parse_ical(text: str) -> list:
+    """Return [from, to) date ranges from the VEVENTs of an iCal feed (Booking, Airbnb ...)."""
+    text = re.sub(r"\r?\n[ \t]", "", text)  # unfold continuation lines
+    ranges = []
+    for event in re.findall(r"BEGIN:VEVENT(.*?)END:VEVENT", text, flags=re.S):
+        start = re.search(r"^DTSTART[^:\n]*:(\d{8})", event, flags=re.M)
+        end = re.search(r"^DTEND[^:\n]*:(\d{8})", event, flags=re.M)
+        if not start:
+            continue
+        a = dt.datetime.strptime(start.group(1), "%Y%m%d").date()
+        b = dt.datetime.strptime(end.group(1), "%Y%m%d").date() if end else a + dt.timedelta(days=1)
+        ranges.append((a, max(b, a + dt.timedelta(days=1))))
+    return ranges
+
+
+def load_availability() -> dict:
+    """Booked periods from content/availability.json plus any iCal feeds in $SITE_ICAL_URLS."""
+    path = CONTENT / "availability.json"
+    manual = load_json(path).get("booked", []) if path.exists() else []
+    ranges = [(dt.date.fromisoformat(b["from"]), dt.date.fromisoformat(b["to"])) for b in manual]
+
+    for url in os.environ.get("SITE_ICAL_URLS", "").split():
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (static site build)"})
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                feed = parse_ical(resp.read().decode("utf-8", "replace"))
+            ranges += feed
+            print(f"  ✓ calendar feed: {len(feed)} booking(s)")
+        except Exception as exc:  # a broken feed must not break the whole site
+            print(f"  ! calendar feed could not be loaded ({exc.__class__.__name__}) – skipped")
+
+    # Keep future bookings only and merge overlapping ones.
+    today = dt.date.today()
+    merged = []
+    for a, b in sorted(r for r in ranges if r[1] > today):
+        if merged and a <= merged[-1][1]:
+            merged[-1][1] = max(merged[-1][1], b)
+        else:
+            merged.append([a, b])
+    return {
+        "booked": [[a.isoformat(), b.isoformat()] for a, b in merged],
+        "updated": today.isoformat(),
+    }
 
 
 def block_rooms(rooms: list, t: dict, root: str) -> tuple:
@@ -228,6 +367,8 @@ def block_jsonld(config: dict, t: dict, img: dict, lang: str) -> str:
         "url": f'{config["site_url"]}/{lang}/',
         "image": f'{config["site_url"]}/{img["hero"]["large"]}',
         # Phone and e-mail are deliberately left out: they would be plain text here.
+        "geo": {"@type": "GeoCoordinates", "latitude": config["latitude"], "longitude": config["longitude"]},
+        "hasMap": config["map_link_url"],
         "address": {
             "@type": "PostalAddress",
             "addressLocality": config["address_locality"],
@@ -241,6 +382,9 @@ def block_jsonld(config: dict, t: dict, img: dict, lang: str) -> str:
             "numberOfBathroomsTotal": 2,
             "floorSize": {"@type": "QuantitativeValue", "value": 145, "unitCode": "MTK"},
         },
+        "checkinTime": config["house_rules"]["checkin_from"],
+        "checkoutTime": config["house_rules"]["checkout_until"],
+        "petsAllowed": False,
         "amenityFeature": [
             {"@type": "LocationFeatureSpecification", "name": a["text"], "value": True}
             for a in t["amenities"]["items"]
@@ -287,8 +431,10 @@ def build() -> None:
 
     # Derived config values.
     config["phone_href"] = "tel:" + re.sub(r"[^\d+]", "", config["phone"])
-    config["map_embed_url"] = f'https://maps.google.com/maps?q={quote(config["map_query"])}&z=13&output=embed'
-    config["map_link_url"] = f'https://www.google.com/maps/search/?api=1&query={quote(config["map_query"])}'
+    coords = f'{config["latitude"]},{config["longitude"]}'
+    config["map_embed_url"] = f"https://maps.google.com/maps?q={coords}&z=15&output=embed"
+    # The Google Maps listing of the house (opens its pin, photos and reviews).
+    config["map_link_url"] = config.get("google_maps_url") or f"https://www.google.com/maps/search/?api=1&query={coords}"
     config["year"] = dt.date.today().year
     config["version"] = dt.datetime.now().strftime("%Y%m%d%H%M")
     config["site_url"] = config["site_url"].rstrip("/")
@@ -315,7 +461,10 @@ def build() -> None:
     img = {
         "hero": process_image(PHOTOS / config["hero_image"], DIST / "img" / "featured", produced),
         "about": process_image(PHOTOS / config["about_image"], DIST / "img" / "featured", produced),
+        "og": make_og_image(PHOTOS / config["hero_image"], produced),
     }
+    availability = load_availability()
+    print(f"  ✓ calendar: {len(availability['booked'])} booked period(s)")
 
     # Remove resized images whose source photo was deleted or moved.
     for stale in (DIST / "img").rglob("*.jpg"):
@@ -332,12 +481,15 @@ def build() -> None:
     icons = {name: icon(name) for name in ICON_PATHS}
     page_tpl = (SRC / "templates" / "page.html").read_text(encoding="utf-8")
     root_tpl = (SRC / "templates" / "root.html").read_text(encoding="utf-8")
+    privacy_tpl = (SRC / "templates" / "privacy.html").read_text(encoding="utf-8")
+    notfound_tpl = (SRC / "templates" / "404.html").read_text(encoding="utf-8")
     hreflang = block_hreflang(config)
     obf = {
         "phone": obfuscate(config["phone"]),
         "phone_href": obfuscate(config["phone_href"]),
         "email": obfuscate(config["email"]),
         "email_href": obfuscate(f'mailto:{config["email"]}'),
+        "whatsapp": obfuscate(config.get("whatsapp") or ""),
     }
 
     for code in langs:
@@ -368,12 +520,33 @@ def build() -> None:
             ),
             "contact_cards": block_contact_cards(config, t),
             "jsonld": block_jsonld(config, t, img, code),
+            "reviews": block_reviews(config, t, code),
+            "price_notes": "".join(f"<li>{esc(n)}</li>" for n in t["prices"]["notes"]),
+            "calendar_data": block_calendar_data(config, t, code, availability),
+            "explore": block_explore(t),
+            "fab": block_fab(config, t, obf),
         }
         ctx = {"lang": code, "root": root, "t": t, "c": config, "img": img, "html": blocks, "icon": icons, "obf": obf}
         out = DIST / code / "index.html"
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(render(page_tpl, ctx), encoding="utf-8")
         print(f"  ✓ {code}/index.html")
+
+        # Privacy policy: /<lang>/privacy/
+        privacy_root = "../../"
+        privacy_blocks = {
+            "robots_meta": robots_meta,
+            "hreflang": block_hreflang(config, "privacy/"),
+            "lang_switcher": block_lang_switcher(langs, code, privacy_root, "privacy/"),
+            "sections": "".join(
+                f'<h2>{esc(s["h"])}</h2>' + "".join(f"<p>{esc(p)}</p>" for p in s["p"])
+                for s in t["privacy"]["sections"]
+            ),
+        }
+        privacy_ctx = dict(ctx, root=privacy_root, html=privacy_blocks)
+        out = DIST / code / "privacy" / "index.html"
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_text(render(privacy_tpl, privacy_ctx), encoding="utf-8")
 
     # Root page: redirects to the visitor's language.
     root_blocks = {
@@ -388,10 +561,27 @@ def build() -> None:
         render(root_tpl, {"c": config, "img": img, "html": root_blocks}), encoding="utf-8"
     )
 
+    # 404 page (GitHub Pages and Cloudflare Pages serve /404.html for unknown URLs).
+    # It can be shown at any depth, so it links with absolute paths from the site root.
+    base_path = urlparse(config["site_url"]).path.rstrip("/") + "/"
+    notfound_blocks = {
+        "messages": "".join(
+            f'<div class="nf-msg" lang="{c}"><h2>{esc(translations[c]["notfound"]["title"])}</h2>'
+            f'<p>{esc(translations[c]["notfound"]["text"])}</p>'
+            f'<a class="btn btn-light" href="{base_path}{c}/">{esc(translations[c]["notfound"]["home"])}</a></div>'
+            for c in langs
+        ),
+    }
+    (DIST / "404.html").write_text(
+        render(notfound_tpl, {"c": config, "img": img, "root": base_path, "html": notfound_blocks}), encoding="utf-8"
+    )
+
     # SEO helpers.
     today = dt.date.today().isoformat()
     urls = "".join(
-        f"  <url><loc>{config['site_url']}/{c}/</loc><lastmod>{today}</lastmod></url>\n" for c in langs
+        f"  <url><loc>{config['site_url']}/{c}/{page}</loc><lastmod>{today}</lastmod></url>\n"
+        for c in langs
+        for page in ("", "privacy/")
     )
     (DIST / "sitemap.xml").write_text(
         f'<?xml version="1.0" encoding="UTF-8"?>\n'

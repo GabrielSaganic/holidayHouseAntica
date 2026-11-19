@@ -7,12 +7,14 @@ Croatian, English, German and Italian. Hosting is free; only the domain costs mo
 
 ```
 content/
-  config.json        phone, e-mail, WhatsApp, map, domain, room order, hero/about photo
+  config.json        phone, e-mail, map, prices, house rules, review score, room order ...
+  availability.json  booked periods for the availability calendar (manual)
   i18n/hr.json       all texts – one file per language (hr, en, de, it)
 photos/
   bedroom-1/ ...     one folder per room – the site shows exactly these photos
 src/
-  templates/         page.html (language pages), root.html (language redirect)
+  templates/         page.html (language pages), root.html (language redirect),
+                     privacy.html (privacy policy), 404.html (page not found)
   assets/            css, js, fonts, favicon
 build.py             generates the finished website into dist/
 dist/                OUTPUT – this folder is what gets uploaded
@@ -37,8 +39,37 @@ only, e.g. `385911234567`; set to `""` to hide the button) in `content/config.js
 `noindex` and `robots.txt` blocks crawlers, so Google won't list the test site.
 Set it to `false` once the real contact details are in.
 
-**Map pin** – `map_query` in `config.json`. For an exact pin use coordinates,
-e.g. `"44.80123, 14.37456"` (right-click the house in Google Maps to copy them).
+**Prices** – `seasons` in `config.json`: periods as `MM-DD` pairs, `price` in EUR per
+night for the whole house, `min_nights`. The price is shown under every date in the
+availability calendar, and the total is shown when a guest selects dates (with a note if
+the stay is shorter than `min_nights`). Dates outside all seasons show no price and cannot be selected.
+The notes next to the calendar are `prices.notes` in each `i18n/*.json`.
+The current numbers are TEST values.
+
+**Check-in / check-out times** – `house_rules` in `config.json`. They are not shown on
+the page, only passed to Google in the page's structured data.
+
+**Reviews** – `reviews` in `config.json` (score, number of reviews, category scores).
+To show guest quotes, add them to `reviews.quotes` in each language file:
+`{ "text": "Wonderful view ...", "author": "Anna, Germany" }`.
+
+**Availability calendar** – booked periods come from two places:
+1. `content/availability.json` – add `{ "from": "2027-07-03", "to": "2027-07-10" }`
+   (`to` is the departure day, which counts as free). The two entries there now are TEST data.
+2. iCal links in the `SITE_ICAL_URLS` secret (Booking.com: Extranet → Rates & Availability →
+   Sync calendars → Export; Airbnb: Calendar → Availability → Export calendar).
+   GitHub Actions rebuilds the site every morning, so new bookings appear within a day.
+   Note: GitHub pauses scheduled runs in repositories with no commits for 60 days –
+   re-enable the workflow under the Actions tab if that happens.
+
+The calendar is a guide for guests; selected dates are copied into the inquiry form.
+
+**Surroundings** – `explore` in each
+`i18n/*.json`. Distances are approximate – please check them.
+
+**Map pin** – `latitude` / `longitude` in `config.json` (the embedded map), and
+`google_maps_url` – the link behind "Open in Google Maps", pointing to the house's
+own Google Maps listing.
 
 ## Build and preview
 
@@ -58,6 +89,7 @@ python3 build.py --serve    # build and open http://localhost:8000
 | `SITE_PHONE`    | `+385 91 123 4567`            |
 | `SITE_EMAIL`    | `info@your-domain.com`        |
 | `SITE_WHATSAPP` | `385911234567` (digits only)  |
+| `SITE_ICAL_URLS`| iCal export links, space-separated |
 | `SITE_URL`      | `https://www.your-domain.com` |
 
 `config.json` only holds placeholders. In the generated HTML the phone number and
